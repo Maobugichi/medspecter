@@ -13,7 +13,7 @@ const WeekInfo = () => {
     ))
 
     return(
-        <div className="flex">
+        <div className="flex w-full justify-between">
             {info}
         </div>
     )

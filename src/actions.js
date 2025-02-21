@@ -3,7 +3,7 @@ import skel from "./assets/skel.svg";
 import targ from "./assets/targ.svg";
 import trendUp from "./assets/trendUp.svg";
 import trendDown from "./assets/trendDown.svg";
-
+import users from "./assets/users.svg"
 const navItem = [{
     id:"hel",
     d:"M19.903 8.586a1 1 0 0 0-.196-.293l-6-6a1 1 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a1 1 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a1 1 0 0 0-.051-.259q-.014-.048-.033-.093M16.586 8H14V5.414zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10z",
@@ -79,13 +79,14 @@ const weekInfo = [
 ]
 
 const pending = [{
+  
     d:"M198 136a6 6 0 0 1-6 6H64a6 6 0 0 1 0-12h128a6 6 0 0 1 6 6m34-54H24a6 6 0 0 0 0 12h208a6 6 0 0 0 0-12m-80 96h-48a6 6 0 0 0 0 12h48a6 6 0 0 0 0-12",
     viewBox:"0 0 256 256",
     fill:"#2e2a2a",
     text:"filter"
 },
 {
-    d:"M198 136a6 6 0 0 1-6 6H64a6 6 0 0 1 0-12h128a6 6 0 0 1 6 6m34-54H24a6 6 0 0 0 0 12h208a6 6 0 0 0 0-12m-80 96h-48a6 6 0 0 0 0 12h48a6 6 0 0 0 0-12",
+    d:"M42 128a6 6 0 0 1 6-6h72a6 6 0 0 1 0 12H48a6 6 0 0 1-6-6m6-58h56a6 6 0 0 0 0-12H48a6 6 0 0 0 0 12m136 116H48a6 6 0 0 0 0 12h136a6 6 0 0 0 0-12m44.24-102.24l-40-40a6 6 0 0 0-8.48 0l-40 40a6 6 0 0 0 8.48 8.48L178 62.49V144a6 6 0 0 0 12 0V62.49l29.76 29.75a6 6 0 0 0 8.48-8.48",
     viewBox:"0 0 256 256",
     fill:"#2e2a2a",
     text:"Sort"
@@ -99,6 +100,163 @@ const pending = [{
 
 ]
 
-export { navItem , weekInfo , pending }
+const patientInfo = [
+    {
+    
+     name: "Alena Bergson",
+     diagnosis:"Influenza",
+     date:"12-02-2025",
+     status:"Discharged",
+     bgColor:"bg-[#00000003]"
+   },
+   {
+    name: "Modupe Soyinka",
+    diagnosis:"Multiple Sclerosis",
+    date:"12-02-2025",
+    status:"Observation",
+    bgColor:"bg-[#00000008]"
+   },
+   {
+    name: "Ipigansi Bozimo",
+    diagnosis:"Stroke",
+    date:"12-02-2025",
+    status:"Critical",
+    bgColor:"bg-[#00000003]"
+   },
+   {
+    name: "Maryam Salisu",
+    diagnosis:"Tuberculosis",
+    date:"12-02-2025",
+    status:"Recovering",
+    bgColor:"bg-[#00000008]"
+
+   },
+   {
+    name: "Fatima Kabiru",
+    diagnosis:"Asthma",
+    date:"12-02-2025",
+    status:"Discharged",
+    bgColor:"bg-[#00000003]"
+   },
+   {
+    name: "Safiya Maiwada",
+    diagnosis:"Lung Cancer",
+    date:"12-02-2025",
+    status:"Critical",
+    bgColor:"bg-[#00000008]"
+   },
+   {
+    name: "Musa Kawu",
+    diagnosis:"Leukemia",
+    date:"12-02-2025",
+    status:"Critical",
+    bgColor:"bg-[#00000003]"
+   },
+   {
+    name: "Rahma Isa",
+    diagnosis:"Sepsis",
+    date:"12-02-2025",
+    status:"Recovering",
+    bgColor:"bg-[#00000008]"
+   },
+   {
+    name: "Fatima Kabiru",
+    diagnosis:"Colorectal Cancer",
+    date:"12-02-2025",
+    status:"Observation",
+    bgColor:"bg-[#00000003]"
+   },
+]
+
+const anomaly = [
+    {
+        bgColor: "bg-[#FEF2F2]" ,
+        text: "5 High",
+        border:"border-[#FEE2E2]",
+        width:"w-[64px]",
+        color:"text-[#FC485A]"
+    },
+    {
+        bgColor: "bg-[#FFF7ED]" ,
+        text: "3 Medium",
+        border:"border-[#FFEDD5]",
+        width:"w-[84px]",
+        color:"text-[#E65F2B]"
+    },
+    {
+        bgColor: "bg-[#FEFCE899]" ,
+        text: "4 Low",
+        border:"border-[#FEF9C3]",
+        width:"w-[61px]",
+        color:"text-[#FCAE48]"
+    },
+]
+
+const anomalyPatient = [
+    {
+        id:"#14859",
+        name:"Adewale Favour",
+        content:"2 Specialists Notified",
+        d:"M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29M38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46m211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205"
+    },
+    {
+        id:"#15962",
+        name:"Kalu Abel",
+        content:"3 Specialists Notified",
+        d:"M237 147.44a4 4 0 0 1-5.48-1.4c-8.33-14-20.93-22-34.56-22a4 4 0 0 1-1.2-.2a37 37 0 0 1-3.8.2a4 4 0 0 1 0-8a28 28 0 1 0-27.12-35a4 4 0 0 1-7.75-2a36 36 0 1 1 54 39.48c10.81 3.85 20.51 12 27.31 23.48a4 4 0 0 1-1.4 5.44M187.46 214a4 4 0 0 1-1.46 5.46a3.93 3.93 0 0 1-2 .54a4 4 0 0 1-3.46-2a61 61 0 0 0-105.08 0a4 4 0 0 1-6.92-4a68.35 68.35 0 0 1 39.19-31a44 44 0 1 1 40.54 0a68.35 68.35 0 0 1 39.19 31M128 180a36 36 0 1 0-36-36a36 36 0 0 0 36 36m-64-64a28 28 0 1 1 27.12-35a4 4 0 0 0 7.75-2a36 36 0 1 0-53.57 39.75a63.55 63.55 0 0 0-32.5 22.85a4 4 0 0 0 6.4 4.8A55.55 55.55 0 0 1 64 124a4 4 0 0 0 0-8"
+    },
+    {
+        id:"#16859",
+        name:"Morayo Funmi",
+        content:"2 Specialists Notified",
+        viewBox:"0 0 256 256",
+        d:"M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29M38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46m211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205"
+    },
+    {
+        id:"#17859",
+        name:"Ade Mercy",
+        content:"3 Specialists Notified",
+        d:"M237 147.44a4 4 0 0 1-5.48-1.4c-8.33-14-20.93-22-34.56-22a4 4 0 0 1-1.2-.2a37 37 0 0 1-3.8.2a4 4 0 0 1 0-8a28 28 0 1 0-27.12-35a4 4 0 0 1-7.75-2a36 36 0 1 1 54 39.48c10.81 3.85 20.51 12 27.31 23.48a4 4 0 0 1-1.4 5.44M187.46 214a4 4 0 0 1-1.46 5.46a3.93 3.93 0 0 1-2 .54a4 4 0 0 1-3.46-2a61 61 0 0 0-105.08 0a4 4 0 0 1-6.92-4a68.35 68.35 0 0 1 39.19-31a44 44 0 1 1 40.54 0a68.35 68.35 0 0 1 39.19 31M128 180a36 36 0 1 0-36-36a36 36 0 0 0 36 36m-64-64a28 28 0 1 1 27.12-35a4 4 0 0 0 7.75-2a36 36 0 1 0-53.57 39.75a63.55 63.55 0 0 0-32.5 22.85a4 4 0 0 0 6.4 4.8A55.55 55.55 0 0 1 64 124a4 4 0 0 0 0-8"
+    },
+    {
+        id:"#18859",
+        name:"Joko Tomiwa",
+        content:"4 Specialists Notified",
+        d:"M29.6 123.2a4 4 0 0 0 5.6-.8a56 56 0 0 1 89.6 0a3.93 3.93 0 0 0 6.38 0a56 56 0 0 1 89.6 0a4 4 0 1 0 6.4-4.8a63.55 63.55 0 0 0-32.5-22.85a36 36 0 1 0-37.4 0a63.4 63.4 0 0 0-29.3 19a63.34 63.34 0 0 0-29.3-19a36 36 0 1 0-37.4 0A63.6 63.6 0 0 0 28.8 117.6a4 4 0 0 0 .8 5.6M148 64a28 28 0 1 1 28 28a28 28 0 0 1-28-28m-96 0a28 28 0 1 1 28 28a28 28 0 0 1-28-28m142.7 134.75a36 36 0 1 0-37.4 0A63.4 63.4 0 0 0 128 217.7a63.34 63.34 0 0 0-29.3-18.95a36 36 0 1 0-37.4 0a63.6 63.6 0 0 0-32.5 22.85a4 4 0 0 0 6.4 4.8a56 56 0 0 1 89.6 0a3.93 3.93 0 0 0 6.38 0a56 56 0 0 1 89.6 0a4 4 0 0 0 6.4-4.8a63.55 63.55 0 0 0-32.48-22.85M52 168a28 28 0 1 1 28 28a28 28 0 0 1-28-28m96 0a28 28 0 1 1 28 28a28 28 0 0 1-28-28"
+    },
+    {
+        id:"#19859",
+        name:"Aluko Mary",
+        content:"2 Specialists Notified",
+        viewBox:"0 0 256 256",
+        d:"M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29M38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46m211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205"
+    },
+    {
+        id:"#20859",
+        name:"Olori Dare",
+        content:"2 Specialists Notified",
+        viewBox:"0 0 256 256",
+        d:"M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29M38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46m211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205"
+    },
+    {
+        id:"#14859",
+        name:"Adewale Favour",
+        content:"2 Specialists Notified"
+    },
+    {
+        id:"#14859",
+        name:"Adewale Favour",
+        content:"2 Specialists Notified"
+    },
+    {
+        id:"#14859",
+        name:"Adewale Favour",
+        content:"2 Specialists Notified"
+    }
+
+]
+
+
+export { anomalyPatient ,navItem , weekInfo , pending , patientInfo , anomaly }
 
 

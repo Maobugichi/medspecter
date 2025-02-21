@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import WeekInfo from "./WeekInfo";
+import Pending from "./pending";
+import Anomalies from "./anomalies";
 
 const Overview = () => {
     const [greet,setGreet] = useState("")
@@ -16,9 +18,15 @@ const Overview = () => {
         }
     })
     return(
-        <div className="bg-red-200 w-full h-[100vh]">
-             <h1>{greet} name</h1>
-             <WeekInfo/>
+        <div className="w-full h-[100vh] flex gap-5">
+            <div className="w-[65%]">
+                <h1>{greet} name</h1>
+                <WeekInfo/>
+                <Pending/>
+            </div>
+            <div className="w-[35%]">
+                <Anomalies/>
+            </div>
         </div>
        
     )
