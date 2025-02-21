@@ -107,28 +107,36 @@ const patientInfo = [
      diagnosis:"Influenza",
      date:"12-02-2025",
      status:"Discharged",
-     bgColor:"bg-[#00000003]"
+     bgColor:"bg-[#00000003]",
+     statusColor:"bg-[#cccccc]",
+     statusText:"text-[#FFFFFF]"
    },
    {
     name: "Modupe Soyinka",
     diagnosis:"Multiple Sclerosis",
     date:"12-02-2025",
     status:"Observation",
-    bgColor:"bg-[#00000008]"
+    bgColor:"bg-[#00000008]",
+    statusColor:"bg-[#fadfd5]",
+    statusText:"text-[#E65F2B]"
    },
    {
     name: "Ipigansi Bozimo",
     diagnosis:"Stroke",
     date:"12-02-2025",
     status:"Critical",
-    bgColor:"bg-[#00000003]"
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fcd2d2]",
+    statusText:"text-[#EE201C]"
    },
    {
     name: "Maryam Salisu",
     diagnosis:"Tuberculosis",
     date:"12-02-2025",
     status:"Recovering",
-    bgColor:"bg-[#00000008]"
+    bgColor:"bg-[#00000008]",
+    statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]"
 
    },
    {
@@ -136,35 +144,45 @@ const patientInfo = [
     diagnosis:"Asthma",
     date:"12-02-2025",
     status:"Discharged",
-    bgColor:"bg-[#00000003]"
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#cccccc]",
+    statusText:"text-[#FFFFFF]"
    },
    {
     name: "Safiya Maiwada",
     diagnosis:"Lung Cancer",
     date:"12-02-2025",
     status:"Critical",
-    bgColor:"bg-[#00000008]"
+    bgColor:"bg-[#00000008]",
+    statusColor:"bg-[#fcd2d2]",
+    statusText:"text-[#EE201C]"
    },
    {
     name: "Musa Kawu",
     diagnosis:"Leukemia",
     date:"12-02-2025",
     status:"Critical",
-    bgColor:"bg-[#00000003]"
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fcd2d2]",
+    statusText:"text-[#EE201C]"
    },
    {
     name: "Rahma Isa",
     diagnosis:"Sepsis",
     date:"12-02-2025",
     status:"Recovering",
-    bgColor:"bg-[#00000008]"
+    bgColor:"bg-[#00000008]",
+    statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]"
    },
    {
     name: "Fatima Kabiru",
     diagnosis:"Colorectal Cancer",
     date:"12-02-2025",
     status:"Observation",
-    bgColor:"bg-[#00000003]"
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fadfd5]",
+     statusText:"text-[#E65F2B]"
    },
 ]
 

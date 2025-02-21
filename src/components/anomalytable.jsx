@@ -11,7 +11,7 @@ const AnomalyTable = () => {
         />
     ))
     return(
-        <div className="h-full ">
+        <div className="h-full grid gap-1">
             {anomaly}
         </div>
     )

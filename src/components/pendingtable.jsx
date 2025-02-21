@@ -11,6 +11,8 @@ const PendingTable = () => {
          date={patient.date}
          status={patient.status}
          bgColor={patient.bgColor}
+         statusColor={patient.statusColor}
+         statusText={patient.statusText}
         />
     ))
     return(

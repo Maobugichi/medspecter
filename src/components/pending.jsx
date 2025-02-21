@@ -4,7 +4,7 @@ import PendingTable from "./pendingtable"
 
 const Pending = () => {
     return(
-        <div className="w-full p-4 rounded-md border border-[#E8E8E8]">
+        <div className="w-full p-4 rounded-md border text-[14px] border-[#E8E8E8]">
             <PendingHead/>
             <Keys/>
             <PendingTable/>
