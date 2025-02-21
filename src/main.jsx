@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <Root/>,
     children: [
       {
-        path:"/overviews/:overviewId",
+        path:"overviews/:overviewId",
         element:<Overview/>
       }
     ]
