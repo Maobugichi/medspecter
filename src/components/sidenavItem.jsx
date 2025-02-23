@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 
 const SideNavItem = ({id,d,text,viewbox,isActive,onClick,xmlns,dd,path}) => {
-    
+     console.log(path)
     return(
         <Link to={path}>
              <li id={id} onClick={(e) => onClick(e,id)} className={` ${isActive == id ? "bg-[#1E40AF] text-white" : "bg-transparent"} flex h-[44px] w-[188px] rounded-sm flex items-center gap-3`}>

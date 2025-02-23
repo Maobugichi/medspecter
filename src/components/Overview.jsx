@@ -18,7 +18,7 @@ const Overview = () => {
         }
     })
     return(
-        <div className="w-full h-[100vh] flex gap-5">
+        <div className="w-[90%]  h-auto min-h-[100vh] flex gap-5">
             <div className="w-[65%]">
                 <h1>{greet} name</h1>
                 <WeekInfo/>

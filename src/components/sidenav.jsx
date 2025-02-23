@@ -33,7 +33,7 @@ const SideNav = () => {
         />
     ))
     return(
-        <nav className="left-0 w-[20%]  h-auto min-h-[100vh]">
+        <nav className="left-0 w-[18%]  h-auto min-h-[100vh]">
             <ul className="list-none h-[400px] w-full  flex flex-col justify-between items-center">
              {items}
             </ul>

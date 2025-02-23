@@ -7,6 +7,7 @@ import {
 import Root from "./routes/root";
 import Overview from "./components/Overview";
 import "./index.css";
+import PatientList from "./components/PatientLists";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path:"overviews/:overviewId",
         element:<Overview/>
+      },
+      {
+        path:"patientlists/:patientlistId",
+        element:<PatientList/>
       }
     ]
   },

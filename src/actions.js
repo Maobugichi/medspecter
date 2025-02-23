@@ -10,8 +10,8 @@ const navItem = [{
     dd: "M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z",
     text: "Overview",
     xmlns:"http://www.w3.org/2000/svg",
-   viewBox:"0 0 24 24",
-   path:"overviews/1"
+    viewBox:"0 0 24 24",
+    path:"overviews/1"
 },
 
 {
@@ -19,7 +19,8 @@ const navItem = [{
     dd: "M7.346 16.539h1.539V15H7.346zm0-3.77h1.539v-1.538H7.346zm0-3.769h1.539V7.462H7.346zm3.846 7.27h5.385v-1h-5.385zm0-3.77h5.385v-1h-5.385zm0-3.77h5.385v-1h-5.385zM4 20V4h16v16zm1-1h14V5H5zm0 0V5z",
     text:"Patient List",
     xmlns:"http://www.w3.org/2000/svg",
-    viewBox:"0 0 24 24"
+    viewBox:"0 0 24 24",
+    path:"patientlists/1"
     },
 
     {
@@ -79,7 +80,6 @@ const weekInfo = [
 ]
 
 const pending = [{
-  
     d:"M198 136a6 6 0 0 1-6 6H64a6 6 0 0 1 0-12h128a6 6 0 0 1 6 6m34-54H24a6 6 0 0 0 0 12h208a6 6 0 0 0 0-12m-80 96h-48a6 6 0 0 0 0 12h48a6 6 0 0 0 0-12",
     viewBox:"0 0 256 256",
     fill:"#2e2a2a",
@@ -109,7 +109,8 @@ const patientInfo = [
      status:"Discharged",
      bgColor:"bg-[#00000003]",
      statusColor:"bg-[#cccccc]",
-     statusText:"text-[#FFFFFF]"
+     statusText:"text-[#FFFFFF]",
+     width:"w-[140px]"
    },
    {
     name: "Modupe Soyinka",
@@ -118,7 +119,8 @@ const patientInfo = [
     status:"Observation",
     bgColor:"bg-[#00000008]",
     statusColor:"bg-[#fadfd5]",
-    statusText:"text-[#E65F2B]"
+    statusText:"text-[#E65F2B]",
+     width:"w-[140px]"
    },
    {
     name: "Ipigansi Bozimo",
@@ -127,7 +129,8 @@ const patientInfo = [
     status:"Critical",
     bgColor:"bg-[#00000003]",
     statusColor:"bg-[#fcd2d2]",
-    statusText:"text-[#EE201C]"
+    statusText:"text-[#EE201C]",
+     width:"w-[140px]"
    },
    {
     name: "Maryam Salisu",
@@ -136,7 +139,8 @@ const patientInfo = [
     status:"Recovering",
     bgColor:"bg-[#00000008]",
     statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]"
+    statusText:"text-[#34C759]",
+     width:"w-[140px]"
 
    },
    {
@@ -146,7 +150,8 @@ const patientInfo = [
     status:"Discharged",
     bgColor:"bg-[#00000003]",
     statusColor:"bg-[#cccccc]",
-    statusText:"text-[#FFFFFF]"
+    statusText:"text-[#FFFFFF]",
+     width:"w-[140px]"
    },
    {
     name: "Safiya Maiwada",
@@ -155,7 +160,8 @@ const patientInfo = [
     status:"Critical",
     bgColor:"bg-[#00000008]",
     statusColor:"bg-[#fcd2d2]",
-    statusText:"text-[#EE201C]"
+    statusText:"text-[#EE201C]",
+    width:"w-[140px]"
    },
    {
     name: "Musa Kawu",
@@ -164,7 +170,8 @@ const patientInfo = [
     status:"Critical",
     bgColor:"bg-[#00000003]",
     statusColor:"bg-[#fcd2d2]",
-    statusText:"text-[#EE201C]"
+    statusText:"text-[#EE201C]",
+    width:"w-[140px]"
    },
    {
     name: "Rahma Isa",
@@ -173,7 +180,8 @@ const patientInfo = [
     status:"Recovering",
     bgColor:"bg-[#00000008]",
     statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]"
+    statusText:"text-[#34C759]",
+    width:"w-[140px]"
    },
    {
     name: "Fatima Kabiru",
@@ -182,8 +190,166 @@ const patientInfo = [
     status:"Observation",
     bgColor:"bg-[#00000003]",
     statusColor:"bg-[#fadfd5]",
-     statusText:"text-[#E65F2B]"
+    statusText:"text-[#E65F2B]",
+    width:"w-[140px]"
    },
+   {
+    id:"#000001",
+    name: "Diobu Pakabo",
+    diagnosis:"Sepsis",
+    date:"12-04-2000",
+    treatment:"Antibiotics",
+    status:"Observation",
+    doctor:"Dr Akintayo",
+    number:"+234 814 001 8031",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fadfd5]",
+    statusText:"text-[#E65F2B]",
+    width:"w-[10%]"
+  },
+  {
+    id:"#000002",
+    name: "Hafsat Garba",
+    diagnosis:"Malaria",
+    date:"04-05-2012",
+    treatment:"AntiMalaria",
+    status:"Discharged",
+    doctor:"Dr Anna",
+    number:"+234 914 607 5727",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#cccccc]",
+    statusText:"text-[#ffffff]",
+    width:"w-[10%]"
+  },
+  {
+    id:"#000003",
+    name: "Rabi Wakili",
+    diagnosis:"Typhoid",
+    date:"06-08-2001",
+   
+    treatment:"Antibiotics",
+    status:"Observation",
+    doctor:"Dr Adeyemi",
+    number:"+234 705 613 7573",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fadfd5]",
+    statusText:"text-[#E65F2B]",
+   width:"w-[10%]"
+  },
+  {
+    id:"#000004",
+    name: "Ikaki Pakabo",
+    date:"17-02-1999",
+    diagnosis:"HIV/AIDS",
+    treatment:"Antiretroviral Theraph ",
+    status:"Observation",
+    doctor:"Dr Okafor",
+    number:"+234 817 031 8837",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fadfd5]",
+    statusText:"text-[#E65F2B]",
+    width:"w-[10%]"
+
+  },
+  {
+    id:"#000005",
+    name: "Ebibere Akani",
+    date:"13-10-2003",
+    diagnosis:"Asthma",
+    treatment:"Inhalers",
+    status:"Recovering",
+    doctor:"Dr Balogun",
+    number:"+234 707 943 8710",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]",
+    width:"w-[10%]"
+  },
+  {
+    id:"#000006",
+    name: "Bilkisu Jibrin",
+    date:"29-03-1948",
+    diagnosis:"Bronchitis",
+    treatment:"Fluids",
+    status:"Recovering",
+    doctor:"Dr Nwosu",
+    number:"+234 703 172 9197",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]",
+    width:"w-[10%]"
+  },
+  {
+    id:"#000007",
+    name: "Titi Iwalewa",
+    date:"15-12-2002",
+    diagnosis:"Brain Tumor",
+    treatment:"Chemotheraphy",
+    status:"Critical",
+    doctor:"Dr Aluko",
+    number:"+234 901 261 4631",
+    bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#fcd2d2]",
+    statusText:"text-[#EE201C]",
+    width:"w-[10%]"
+  },
+  
+  {
+    id:"#000008",
+    name: "Idris Yahaya",
+    date:"02-11-1997",
+    diagnosis:"Stroke",
+    treatment:"Rehabilitation",
+    status:"Critical",
+    doctor:"Dr Kalu",
+    number:"+234 910 202 8760",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#fcd2d2]",
+    statusText:"text-[#EE201C]",
+   width:"w-[10%]"
+  },
+  {
+    id:"#000009",
+    name: "Ebizi Inengite",
+    date:"04-12-2005",
+    diagnosis:"Migraine",
+    treatment:"Triptans",
+    status:"Recovering",
+    doctor:"Dr Hassan",
+    number:"+234 803 418 1571",
+    bgColor:"bg-[#00000003]",
+    statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]",
+   width:"w-[10%]"
+  },
+  {
+    id:"#000010",
+    name: "Kelechi Ibe",
+    date:"16-05-1978",
+    diagnosis:"Ulcers",
+    treatment:"Omeprazole",
+    status:"Recovering",
+    doctor:"Dr. Ibrahim",
+    number:"+234 901 261 4631",
+    bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]",
+   width:"w-[10%]"
+  },
+  {
+    id:"#000011",
+    name: "Adeleke Rae",
+    date:"23-02-2005",
+    diagnosis:"Diarrhoea",
+    treatment:"Tetracycline",
+    status:"Recovering",
+    doctor:"Dr. Abbey",
+    number:"+234 918 019 0931",
+    bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#d6f4de]",
+    statusText:"text-[#34C759]",
+   width:"w-[10%]"
+  },
 ]
 
 const anomaly = [

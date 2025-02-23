@@ -1,7 +1,10 @@
-const AnomalyButton = () => {
+const AnomalyButton = ({isShow,setIsShow}) => {
+    function handleClick() {
+        setIsShow(prev => !prev)
+    }
     return(
-        <button className="w-[192px] h-[35px] bg-[#F9FAFB] border border-[#0000001A] text-[#535353] text-[12px] rounded-md ml-20">
-            View all Flagged Anomalies (20)
+        <button onClick={handleClick} className="w-[192px] h-[35px] bg-[#F9FAFB] border border-[#0000001A] text-[#535353] text-[12px] rounded-md ml-16">
+           { isShow ? "See Less" : "View all Flagged Anomalies (20)"}
         </button>
     )
 }
