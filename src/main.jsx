@@ -4,11 +4,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { ContextProvider } from "./components/ContextProvider";
 import Root from "./routes/root";
-import Overview from "./components/Overview";
+import Overview from "./components/oveview/Overview";
 import "./index.css";
-import PatientList from "./components/PatientLists";
-
+import PatientList from "./components/patient/PatientLists";
+import Analysis from "./components/analysis/Analysis";
+import AIdiag from "./components/aidiagnosis/AI-Diagnosis";
+import Analytics from "./components/analytics/Analytics";
 const router = createBrowserRouter([
   {
     path: "/medspecter/",
@@ -21,13 +24,29 @@ const router = createBrowserRouter([
       {
         path:"patientlists/:patientlistId",
         element:<PatientList/>
+      },
+      {
+        path:"analysis/:analysisId",
+        element:<Analysis/>
+      },
+      {
+        path:"aidiagnosis/:aidiagnosisId",
+        element:<AIdiag/>
+      },
+      {
+        path:"analytics/:analyticsId",
+        element:<Analytics/>
       }
     ]
   },
 ]);
 
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider>
+     <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>
 );

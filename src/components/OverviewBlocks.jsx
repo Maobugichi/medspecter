@@ -1,6 +1,6 @@
-const OverviewBlocks = ({src,text,arrSrc,percentage,amount}) => {
+const OverviewBlocks = ({src,text,arrSrc,percentage,amount,width}) => {
     return(
-        <div className=" h-[139px] w-[210px] border border-[#E8E8E8] grid place-items-center rounded-lg">
+        <div className={`${width} h-[139px] border border-[#E8E8E8] grid place-items-center rounded-lg`}>
             <div className="flex w-[90%] mx-auto text-[12px] justify-between mt-5">
                 <div className="flex items-center gap-2">
                   <img src={src} alt="" />

@@ -3,7 +3,14 @@ import skel from "./assets/skel.svg";
 import targ from "./assets/targ.svg";
 import trendUp from "./assets/trendUp.svg";
 import trendDown from "./assets/trendDown.svg";
-import users from "./assets/users.svg"
+import hourGlass from "./assets/hourglass.svg";
+import drop from "./assets/drop.svg";
+import ruler from "./assets/ruler.svg";
+import scale from "./assets/scale.svg"
+import clock from "./assets/Clock.svg";
+import blueCircle from "./assets/blueCircle.svg";
+import notePencil from "./assets/NotePencil.svg";
+import four from "./assets/four.svg";
 const navItem = [{
     id:"hel",
     d:"M19.903 8.586a1 1 0 0 0-.196-.293l-6-6a1 1 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a1 1 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a1 1 0 0 0-.051-.259q-.014-.048-.033-.093M16.586 8H14V5.414zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10z",
@@ -28,14 +35,16 @@ const navItem = [{
     dd: "M216 40h-80V24a8 8 0 0 0-16 0v16H40a16 16 0 0 0-16 16v120a16 16 0 0 0 16 16h39.36l-21.61 27a8 8 0 0 0 12.5 10l29.59-37h56.32l29.59 37a8 8 0 1 0 12.5-10l-21.61-27H216a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16m0 136H40V56h176zm-112-56v24a8 8 0 0 1-16 0v-24a8 8 0 0 1 16 0m32-16v40a8 8 0 0 1-16 0v-40a8 8 0 0 1 16 0m32-16v56a8 8 0 0 1-16 0V88a8 8 0 0 1 16 0",
     text:"Image Analysis",
     xmlns:"http://www.w3.org/2000/svg",
-    viewBox:"0 0 256 256"
+    viewBox:"0 0 256 256",
+     path:"analysis/1"
     },
     {
         id:"her",
         dd: "M188.25 169.77A84.3 84.3 0 0 0 220 102c-1-43.64-35.9-79.62-79.45-81.91A84 84 0 0 0 52 103l-22.9 44c-.05.09-.09.18-.13.27a12 12 0 0 0 5.66 15.46l.13.06L60 174.38V208a12 12 0 0 0 12 12h48a4 4 0 0 0 0-8H72a4 4 0 0 1-4-4v-36.19a4 4 0 0 0-2.34-3.64l-27.5-12.59a4 4 0 0 1-1.88-5l23.27-44.72A4.1 4.1 0 0 0 60 104a76 76 0 0 1 64-75v23.4a20 20 0 1 0 8 0V28.11a78 78 0 0 1 8.11 0c33.13 1.74 60.72 25 69.2 55.89H184a4 4 0 0 0-3.07 1.44l-27.46 33a20.12 20.12 0 1 0 6.13 5.13L185.87 92H211a75.9 75.9 0 0 1-29.44 72.8a4 4 0 0 0-1.57 3.7l8 64a4 4 0 0 0 4 3.5h.5a4 4 0 0 0 3.51-4.5ZM140 72a12 12 0 1 1-12-12a12 12 0 0 1 12 12m4 76a12 12 0 1 1 12-12a12 12 0 0 1-12 12",
         text:"AI Diagnosis Report",
         xmlns:"http://www.w3.org/2000/svg" ,
-        viewBox:"0 0 256 256"
+        viewBox:"0 0 256 256",
+        path:"aidiagnosis/1"
     },
     
     {
@@ -43,7 +52,8 @@ const navItem = [{
         dd:"M12.5 11.5h7.489q-.202-3.039-2.326-5.172q-2.124-2.134-5.163-2.317zm-1 8.489V4.012q-3.16.182-5.33 2.483T4 12t2.17 5.505t5.33 2.484m1 0q3.039-.177 5.166-2.314q2.126-2.136 2.323-5.175H12.5zM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924t-1.925-2.856T3 12.003t.709-3.51Q4.417 6.85 5.63 5.634t2.857-1.925T11.997 3t3.506.71t2.858 1.93t1.929 2.855q.71 1.637.71 3.511q0 1.852-.708 3.491t-1.924 2.864t-2.856 1.932t-3.509.707",
         text:"Analytics",
         xmlns:"http://www.w3.org/2000/svg" ,
-        viewBox:"0 0 24 24"
+        viewBox:"0 0 24 24",
+        path:"analytics/1"
     },
     {
         id:"mine",
@@ -77,6 +87,59 @@ const weekInfo = [
         amount:167
     },
 
+]
+
+const docInfo = [
+    {
+        src: four,
+        text:"Active Patients Monitored",
+        arrSrc: trendUp,
+        percentage:"+30.8%",
+        amount:354,
+        data :{
+            weekly: [ { value:88, label: "0-17"}, { value:72, label: "18-24"},{ value:186, label:"25-31"},{ value:102, label:"32-38"},{ value:88, label:"39-45" },{ value:118, label:"39-45" },{ value:40, label:"39-45" },{ value:76, label:"39-45" },{ value:140, label:"39-45" },{ value:116, label:"39-45" }],
+            monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" },{ value:177, label:"Infections" },{ value:177, label:"Infections" }],
+            yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+           },
+        aiAccuracy:{ weekly: [ { value:96, label: "Bone Tumor",fill:"#FC485A"}, { value:124, label: "Cancer",fill:"#34C759"},{ value:141, label:"Infection",fill:"#34C759"},{ value:141, label:"Stroke",fill:"#34C759"},]}
+      },
+      {
+          src: clock,
+          text:"Average Scan Analysis Time",
+          arrSrc: trendUp,
+          percentage:"+8.9%",
+          amount:265,
+          data :{
+            weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+            monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" },{ value:177, label:"Infections" },{ value:177, label:"Infections" }],
+            yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+           },
+      },
+      {
+          src: blueCircle,
+          text:"Critical Findings Detected",
+          arrSrc: trendUp,
+          percentage:"+2.9%",
+          amount:120,
+          data :{
+            weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+            monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" },{ value:177, label:"Infections" },{ value:177, label:"Infections" }],
+            yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+           },
+      },
+      {
+        src: notePencil,
+        text:"Reviewed Cases",
+        arrSrc: trendDown,
+        percentage:"-9.7%",
+        amount:25,
+        data :{
+            weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+            monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" },{ value:177, label:"Infections" },{ value:177, label:"Infections" }],
+            yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+           },
+    },
+  
 ]
 
 const pending = [{
@@ -120,7 +183,7 @@ const patientInfo = [
     bgColor:"bg-[#00000008]",
     statusColor:"bg-[#fadfd5]",
     statusText:"text-[#E65F2B]",
-     width:"w-[140px]"
+    width:"w-[140px]"
    },
    {
     name: "Ipigansi Bozimo",
@@ -194,163 +257,468 @@ const patientInfo = [
     width:"w-[140px]"
    },
    {
-    id:"#000001",
-    name: "Diobu Pakabo",
-    diagnosis:"Sepsis",
-    date:"12-04-2000",
-    treatment:"Antibiotics",
-    status:"Observation",
-    doctor:"Dr Akintayo",
-    number:"+234 814 001 8031",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#fadfd5]",
-    statusText:"text-[#E65F2B]",
-    width:"w-[10%]"
-  },
-  {
-    id:"#000002",
-    name: "Hafsat Garba",
-    diagnosis:"Malaria",
-    date:"04-05-2012",
-    treatment:"AntiMalaria",
-    status:"Discharged",
-    doctor:"Dr Anna",
-    number:"+234 914 607 5727",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#cccccc]",
-    statusText:"text-[#ffffff]",
-    width:"w-[10%]"
-  },
-  {
-    id:"#000003",
-    name: "Rabi Wakili",
-    diagnosis:"Typhoid",
-    date:"06-08-2001",
+   id:"#000001",
+   name: "Diobu Pakabo",
+   diagnosis:"Sepsis",
+   date:"12-04-2000",
+   treatment:"Antibiotics",
+   status:"Observation",
+   doctor:"Dr Akintayo",
+   number:"+234 814 001 8031",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#fadfd5]",
+   statusText:"text-[#E65F2B]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" },{ value:177, label:"Infections" },{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
    
-    treatment:"Antibiotics",
-    status:"Observation",
-    doctor:"Dr Adeyemi",
-    number:"+234 705 613 7573",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#fadfd5]",
-    statusText:"text-[#E65F2B]",
-   width:"w-[10%]"
-  },
-  {
-    id:"#000004",
-    name: "Ikaki Pakabo",
-    date:"17-02-1999",
-    diagnosis:"HIV/AIDS",
-    treatment:"Antiretroviral Theraph ",
-    status:"Observation",
-    doctor:"Dr Okafor",
-    number:"+234 817 031 8837",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#fadfd5]",
-    statusText:"text-[#E65F2B]",
-    width:"w-[10%]"
 
-  },
-  {
-    id:"#000005",
-    name: "Ebibere Akani",
-    date:"13-10-2003",
-    diagnosis:"Asthma",
-    treatment:"Inhalers",
-    status:"Recovering",
-    doctor:"Dr Balogun",
-    number:"+234 707 943 8710",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]",
-    width:"w-[10%]"
-  },
-  {
-    id:"#000006",
-    name: "Bilkisu Jibrin",
-    date:"29-03-1948",
-    diagnosis:"Bronchitis",
-    treatment:"Fluids",
-    status:"Recovering",
-    doctor:"Dr Nwosu",
-    number:"+234 703 172 9197",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]",
-    width:"w-[10%]"
-  },
-  {
-    id:"#000007",
-    name: "Titi Iwalewa",
-    date:"15-12-2002",
-    diagnosis:"Brain Tumor",
-    treatment:"Chemotheraphy",
-    status:"Critical",
-    doctor:"Dr Aluko",
-    number:"+234 901 261 4631",
-    bgColor:"bg-[#00000003]",
-   statusColor:"bg-[#fcd2d2]",
-    statusText:"text-[#EE201C]",
-    width:"w-[10%]"
-  },
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"A+",
+   height:175,
+   weight:65,
   
-  {
-    id:"#000008",
-    name: "Idris Yahaya",
-    date:"02-11-1997",
-    diagnosis:"Stroke",
-    treatment:"Rehabilitation",
-    status:"Critical",
-    doctor:"Dr Kalu",
-    number:"+234 910 202 8760",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#fcd2d2]",
-    statusText:"text-[#EE201C]",
-   width:"w-[10%]"
-  },
-  {
-    id:"#000009",
-    name: "Ebizi Inengite",
-    date:"04-12-2005",
-    diagnosis:"Migraine",
-    treatment:"Triptans",
-    status:"Recovering",
-    doctor:"Dr Hassan",
-    number:"+234 803 418 1571",
-    bgColor:"bg-[#00000003]",
-    statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]",
-   width:"w-[10%]"
-  },
-  {
-    id:"#000010",
-    name: "Kelechi Ibe",
-    date:"16-05-1978",
-    diagnosis:"Ulcers",
-    treatment:"Omeprazole",
-    status:"Recovering",
-    doctor:"Dr. Ibrahim",
-    number:"+234 901 261 4631",
-    bgColor:"bg-[#00000003]",
+   },
+   {
+   id:"#000002",
+   name: "Hafsat Garba",
+   diagnosis:"Malaria",
+   date:"04-05-2012",
+   treatment:"AntiMalaria",
+   status:"Discharged",
+   doctor:"Dr Anna",
+   number:"+234 914 607 5727",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#cccccc]",
+   statusText:"text-[#ffffff]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"O-",
+   height:160,
+   weight:55
+   },
+   {
+   id:"#000003",
+   name: "Rabi Wakili",
+   diagnosis:"Typhoid",
+   date:"06-08-2001",
+   treatment:"Antibiotics",
+   status:"Observation",
+   doctor:"Dr Adeyemi",
+   number:"+234 705 613 7573",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#fadfd5]",
+   statusText:"text-[#E65F2B]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"B+",
+   height:180,
+   weight:70
+   },
+   {
+   id:"#000004",
+   name: "Ikaki Pakabo",
+   date:"17-02-1999",
+   diagnosis:"HIV/AIDS",
+   treatment:"Antiretroviral Theraph ",
+   status:"Observation",
+   doctor:"Dr Okafor",
+   number:"+234 817 031 8837",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#fadfd5]",
+   statusText:"text-[#E65F2B]",
+   src:[hourGlass,drop,ruler,scale],
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   width:"w-[10%]",
+   bloodGroup:"AB-",
+   height:165,
+   weight:60
+   },
+   {
+   id:"#000005",
+   name: "Ebibere Akani",
+   date:"13-10-2003",
+   diagnosis:"Asthma",
+   treatment:"Inhalers",
+   status:"Recovering",
+   doctor:"Dr Balogun",
+   number:"+234 707 943 8710",
+   bgColor:"bg-[#00000003]",
    statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]",
-   width:"w-[10%]"
-  },
-  {
-    id:"#000011",
-    name: "Adeleke Rae",
-    date:"23-02-2005",
-    diagnosis:"Diarrhoea",
-    treatment:"Tetracycline",
-    status:"Recovering",
-    doctor:"Dr. Abbey",
-    number:"+234 918 019 0931",
-    bgColor:"bg-[#00000003]",
+   statusText:"text-[#34C759]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"A-",
+   height:170,
+   weight:65
+   },
+   {
+   id:"#000006",
+   name: "Bilkisu Jibrin",
+   date:"29-03-1948",
+   diagnosis:"Bronchitis",
+   treatment:"Fluids",
+   status:"Recovering",
+   doctor:"Dr Nwosu",
+   number:"+234 703 172 9197",
+   bgColor:"bg-[#00000003]",
    statusColor:"bg-[#d6f4de]",
-    statusText:"text-[#34C759]",
-   width:"w-[10%]"
-  },
-]
+   statusText:"text-[#34C759]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"O+",
+   height:155,
+   weight:50
+   },
+   {
+   id:"#000007",
+   name: "Titi Iwalewa",
+   date:"15-12-2002",
+   diagnosis:"Brain Tumor",
+   treatment:"Chemotheraphy",
+   status:"Critical",
+   doctor:"Dr Aluko",
+   number:"+234 901 261 4631",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#fcd2d2]",
+   statusText:"text-[#EE201C]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"AB+",
+   height:185,
+   weight:75
+   },
+   {
+   id:"#000008",
+   name: "Idris Yahaya",
+   date:"02-11-1997",
+   diagnosis:"Stroke",
+   treatment:"Rehabilitation",
+   status:"Critical",
+   doctor:"Dr Kalu",
+   number:"+234 910 202 8760",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#fcd2d2]",
+   statusText:"text-[#EE201C]",
+   src:[hourGlass,drop,ruler,scale],
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   width:"w-[10%]",
+   bloodGroup:"B-",
+   height:178,
+   weight:72
+   },
+   {
+   id:"#000009",
+   name: "Ebizi Inengite",
+   date:"04-12-2005",
+   diagnosis:"Migraine",
+   treatment:"Triptans",
+   status:"Recovering",
+   doctor:"Dr Hassan",
+   number:"+234 803 418 1571",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#d6f4de]",
+   statusText:"text-[#34C759]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"O+",
+   height:168,
+   weight:62
+   },
+   {
+   id:"#000010",
+   name: "Kelechi Ibe",
+   date:"16-05-1978",
+   diagnosis:"Ulcers",
+   treatment:"Omeprazole",
+   status:"Recovering",
+   doctor:"Dr. Ibrahim",
+   number:"+234 901 261 4631",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#d6f4de]",
+   statusText:"text-[#34C759]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"AB-",
+   height:182,
+   weight:78
+   },
+   {
+   id:"#000011",
+   name: "Adeleke Rae",
+   date:"23-02-2005",
+   diagnosis:"Diarrhoea",
+   treatment:"Tetracycline",
+   status:"Recovering",
+   doctor:"Dr. Abbey",
+   number:"+234 918 019 0931",
+   bgColor:"bg-[#00000003]",
+   statusColor:"bg-[#d6f4de]",
+   statusText:"text-[#34C759]",
+   data :{
+    weekly: [ { value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    monthly:[{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }],
+    yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
+   },
+   streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   history:[{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },{
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   {
+    date:"Dec 05,2024",
+    treatment:"Chemotherapy Cycle 2"
+   },
+   
+
+   ],
+   src:[hourGlass,drop,ruler,scale],
+   width:"w-[10%]",
+   bloodGroup:"A+",
+   height:172,
+   weight:68
+}]
 
 const anomaly = [
     {
@@ -441,6 +809,6 @@ const anomalyPatient = [
 ]
 
 
-export { anomalyPatient ,navItem , weekInfo , pending , patientInfo , anomaly }
+export { anomalyPatient ,navItem , weekInfo , pending , patientInfo , anomaly , docInfo }
 
 

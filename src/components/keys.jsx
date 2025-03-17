@@ -28,7 +28,7 @@ const Keys = ({info,check}) => {
       return keys
   })
 
-  const length = key[0].length - 4;
+  const length = key[0].length - 11;
  
   return(
     <div className="flex h-[55px] justify-between items-center  overflow-hidden">

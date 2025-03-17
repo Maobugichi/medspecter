@@ -6,4 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base:"/medspecter/",
   plugins: [tailwindcss(),react()],
+  env: {
+    VITE_OPENAI_API_KEY:process.env.VITE_OPENAI_API_KEY
+  }
 })
