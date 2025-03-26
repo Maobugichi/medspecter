@@ -27,7 +27,7 @@ const Analysis = () => {
       
       
     return(
-        <div className="flex w-[85%] mx-auto">
+        <div className="flex lg:flex-row flex-col w-[95%] lg:w-[85%] mx-auto gap-5">
             <ImageAnalysis/>
             <DetailsFlex
              show={isShow}

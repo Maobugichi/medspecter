@@ -5,7 +5,6 @@ const SideNav = () => {
     const [isActive, setIsActive] = useState(null);
     const [isPath, setPath] = useState("")
     function handleClick(e,id) {
-
         if (isActive) {
             const previouslyActiveElement = document.querySelector(`#${isActive}`);
             if (previouslyActiveElement) {
@@ -19,7 +18,7 @@ const SideNav = () => {
 
     const items = navItem.map(item => (
         <SideNavItem
-        key={item.key}
+         key={item.key}
          id={item.id}
          d={item.d}
          dd={item.dd}

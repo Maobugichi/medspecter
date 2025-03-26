@@ -9,14 +9,14 @@ const AnalyticsBlock = ({docinfo}) => {
          percentage={info.percentage}
          text={info.text}
          arrSrc={info.arrSrc}
-         width="w-[24%]"
+         width="w-[48%] lg:w-[23%]"
        />
     )
    })
 
 
    return(
-     <div className="w-full flex justify-between">
+     <div className="w-full flex  flex-wrap h-auto md:min-h-[25vh] min-h-[30vh] justify-between">
         {blocks}
      </div>
    )

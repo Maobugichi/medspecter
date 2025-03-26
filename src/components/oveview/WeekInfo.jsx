@@ -9,12 +9,12 @@ const WeekInfo = () => {
          percentage={info.percentage}
          text={info.text}
          arrSrc={info.arrSrc}
-         width="w-[31%]"
+         width="lg:w-[33%] w-[45%]"
         />
     ))
 
     return(
-        <div className="flex w-full justify-between">
+        <div className="flex w-full gap-2 h-auto min-h-[25vh] flex-wrap  lg:justify-between">
             {info}
         </div>
     )

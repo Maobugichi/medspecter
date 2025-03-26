@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import WeekInfo from "./WeekInfo";
-
+import guage from "../../assets/guages.svg"
 import Pending from "./pending";
 import Anomalies from "./anomalies";
 import { ShowContext } from "../ContextProvider";
-
+import DetailsBox from "../detailsbox";
+import clock from "../../assets/clocks.svg";
+import lightning from "../../assets/lightning.svg";
+import pulse from "../../assets/pulse.svg";
 const Overview = () => {
     const [greet,setGreet] = useState("")
     const [isShow,setIsShow] = useState(false)
@@ -23,17 +26,46 @@ const Overview = () => {
 
   
     return(
-        <div className="lg:w-[85%] h-auto min-h-[100vh] flex flex-col lg:flex-row bg-red-200 w-full items-center gap-5">
-            <div className="w-[65%] grid gap-8">
+        <div className="lg:w-[85%] h-auto min-h-[130vh] flex flex-col lg:flex-row  md:gap-5 w-full ">
+            <div className="lg:w-[65%] w-[95%] h-auto min-h-[90vh] md:min-h-[100vh] flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
-                <WeekInfo/>
-                <Pending/>
+                <div className="flex flex-col justify-between h-[89%]">
+                 <WeekInfo/>
+                 <Pending/>
+                </div>
+                
             </div>
-            <div className="w-[35%]  h-[100vh] ">
+            <div className="lg:w-[35%] lg:h-[115vh]  mt-14 w-full flex flex-col justify-between">
                 <Anomalies
                  show={isShow}
                  setIsShow={setIsShow}
                 />
+                <DetailsBox
+                 info="System Performance overview"
+                 extra={true}
+                 className="h-[40%]"
+                >
+                 <div className="flex flex-col items-center justify-center  h-[75%] ">
+                    <img className="w-[65%] h-[65%]" src={guage} alt="" />
+                    <div className="text-[12px] w-[80%] flex gap-2 flex-wrap  justify-center">
+                       
+                         <div className="flex gap-2">
+                            <img src={clock} alt="clock" />
+                            <p>Response time:  4.8Secs</p>
+                         </div>
+
+                         <div className="flex gap-2">
+                            <img src={lightning} alt="lighteing" />
+                            <p>Up Time:  78%</p>
+                         </div>
+
+                         <div className="flex gap-2">
+                            <img src={pulse} alt="pulse" />
+                            <p>Server Health: 80%</p>
+                        </div>   
+                    </div>
+                 </div>
+                </DetailsBox>
             </div>
         </div>
        

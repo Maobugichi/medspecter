@@ -27,7 +27,7 @@ const DetailsFlex = ({show,setIsShow}) => {
     })
    
     return(
-        <div className="grid gap-3 w-[40%] mr-5">
+        <div className="grid gap-3 lg:w-[40%] w-full lg:mr-5">
             <DetailsBox 
              sel={true}
              info="Patient Details"
@@ -37,7 +37,7 @@ const DetailsFlex = ({show,setIsShow}) => {
              handleChange={handleChange}
              sliceInfo={sliceInfo}
              patientName={newItem ? newItem[0].name : sliceInfo[0].name}
-             className="h-[270px] w-[96%]  "
+             className="h-[270px] lg:w-[96%] w-full"
             >
             <PdCont
              newItem={newItem ? newItem : prevItem}

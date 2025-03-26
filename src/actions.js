@@ -254,7 +254,7 @@ const patientInfo = [
     bgColor:"bg-[#00000003]",
     statusColor:"bg-[#fadfd5]",
     statusText:"text-[#E65F2B]",
-    width:"w-[140px]"
+   
    },
    {
    id:"#000001",
@@ -293,7 +293,7 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
+  
    bloodGroup:"A+",
    height:175,
    weight:65,
@@ -336,7 +336,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"O-",
    height:160,
    weight:55
@@ -378,7 +377,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"B+",
    height:180,
    weight:70
@@ -420,7 +418,6 @@ const patientInfo = [
    
 
    ],
-   width:"w-[10%]",
    bloodGroup:"AB-",
    height:165,
    weight:60
@@ -462,7 +459,6 @@ const patientInfo = [
 
 ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"A-",
    height:170,
    weight:65
@@ -504,7 +500,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"O+",
    height:155,
    weight:50
@@ -546,7 +541,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"AB+",
    height:185,
    weight:75
@@ -588,7 +582,7 @@ const patientInfo = [
    
 
    ],
-   width:"w-[10%]",
+   
    bloodGroup:"B-",
    height:178,
    weight:72
@@ -630,7 +624,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"O+",
    height:168,
    weight:62
@@ -672,7 +665,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"AB-",
    height:182,
    weight:78
@@ -714,7 +706,6 @@ const patientInfo = [
 
    ],
    src:[hourGlass,drop,ruler,scale],
-   width:"w-[10%]",
    bloodGroup:"A+",
    height:172,
    weight:68

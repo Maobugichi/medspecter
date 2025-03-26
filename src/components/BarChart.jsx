@@ -18,12 +18,15 @@ const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,heigh
              handleChange={handleChange}
              head={head}
             />
-         <svg  height={279} className="w-[95%]">
-            <Lines
-             axis={axis}
-            />
-            {barItem}
-        </svg>
+            <div className="w-full overflow-auto">
+                <svg  height={260} className="w-[95%]  mx-auto ">
+                    <Lines
+                     axis={axis}
+                    />
+                    {barItem}   
+                </svg>
+            </div>
+           
     </div>
     )
 }

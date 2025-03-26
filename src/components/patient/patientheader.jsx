@@ -7,12 +7,12 @@ const PatientHeader = ({isOpen,setIsOpen,isInfo,setIsInfo}) => {
         setIsOpen(prev => !prev)
     }
     return(
-        <div className="flex justify-between relative  w-[98%]">
+        <div className="flex justify-between relative  w-[99%] mx-auto ">
            
             <h2>
                 Patient List
             </h2>
-            <div className="flex gap-4">
+            <div className="flex gap-2 md:gap-4">
                 <DownloadBtn/>
                 <Block
                  text={pending[0].text}

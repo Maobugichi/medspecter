@@ -1,15 +1,16 @@
-const PendingCases = ({id,name,diagnosis,date,status,bgColor,statusColor,statusText,doctor,number,treatment,width}) => {
+const PendingCases = ({id,name,diagnosis,date,status,bgColor,statusColor,statusText,doctor,number,treatment,width , spacing}) => {
+    
     return(
-        <div className={`${bgColor} flex h-[41px] text-[14px] w-full  justify-between text-[#000000] items-center`}>
-            {id && <input type="checkbox" />}
-            {id &&  <p className={`${width} flex items-start`}>{id}</p>}
-            <p className={`w-auto min-w-[12%] flex items-start`}>{name}</p>
-            <p className={`${width} flex items-start`}>{diagnosis}</p>
-            <p className={`${width} flex items-start`}>{date}</p>
-            {treatment &&   <p className={`w-[14%]`}>{treatment}</p>}
-            <p className={`${width} grid place-content-center w-[12%]  h-[23px] text-[12px]  ${statusColor} ${statusText} rounded-2xl`}>{status}</p>
-            {doctor && <p className={`${width} flex items-start`}>{doctor}</p>}
-            {number && <p className={`w-[12%] flex items-start`}>{number}</p>}
+        <div className={`${bgColor} flex h-[41px] text-[10px]  lg:text-[14px] w-full  text-[#000000] ${spacing} items-center`}>
+            {id && <input className="w-2 md:w-10" type="checkbox" />}
+            {id &&  <p className={`w-auto lg:min-w-[60px] bg-green-300 flex  items-start `}>{id}</p>}
+             <p className={` w-auto md:min-w-[120px] min-w-[68px]  flex items-start bg-yellow-200`}>{name}</p>    
+             <p className={` flex items-start w-auto min-w-[55px] md:min-w-[80px] bg-blue-200`}>{diagnosis}</p>
+             <p className={` flex items-start  w-auto min-w-[60px] bg-green-300 lg:min-w-[80px]`}>{date}</p>
+            {treatment &&   <p className={`w-auto min-w-[80px] md:min-w-[135px] whitespace-nowrap overflow-x-auto bg-blue-400`}>{treatment}</p>}
+            <p className={` grid place-content-center h-[23px] w-[100px] text-[9px] ${statusColor} ${statusText} rounded-2xl`}>{status}</p>
+            {doctor && <p className={` flex items-start w-auto min-w-[100px]`}>{doctor}</p>}
+            {number && <p className={` flex items-start w-auto min-w-[150px] `}>{number}</p>}
         </div>
     )
 }

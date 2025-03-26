@@ -5,7 +5,7 @@ const PdCont = ({newItem}) => {
     const content =  
         newItem ? newItem.map(item => {
             const newEntries = Array.from(Object.entries(item));
-            const newArray = newEntries.slice(3,4).concat(newEntries.slice(16));
+            const newArray = newEntries.slice(3,4).concat(newEntries.slice(15));
            return(
             newArray.map(([key,value],i) => {
                 return (<PdBlock

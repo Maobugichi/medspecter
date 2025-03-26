@@ -4,9 +4,9 @@ import SideNav from "../components/nav/sidenav";
 
 const Root = () => {
     return(
-        <div>
+        <div className="overflow-hidden w-full ">
           <Header/>
-          <div className="flex w-full bg-yellow-300">
+          <div className="flex w-full">
            <SideNav/>
            <Outlet/>
           </div>

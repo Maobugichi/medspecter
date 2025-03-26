@@ -4,7 +4,7 @@ import AnomalyHead from "../anomaly/anomlyhead"
 
 const Anomalies = ({show,setIsShow}) => {
     return(
-        <div className=" w-full grid gap-2 h-[427px] p-3 rounded-md border border-[#E8E8E8] ">
+        <div className=" lg:w-full w-[95%] mx-auto grid gap-2 h-[57%] p-3 rounded-md border border-[#E8E8E8] ">
           <AnomalyHead/>
           <AnomalyTable
            isShow={show}
@@ -12,7 +12,7 @@ const Anomalies = ({show,setIsShow}) => {
           <Button
            setIsShow={setIsShow}
            content={show ?  "See Less" : "View all Flagged Anomalies (20)"}
-           className={"w-[192px] h-[35px] bg-[#F9FAFB] border border-[#0000001A] text-[#535353] text-[12px] rounded-md ml-16"}
+           className={"lg:w-[192px] w-[65%] h-[35px] bg-[#F9FAFB] border border-[#0000001A] text-[#535353] text-[12px] rounded-md ml-16"}
           />
         </div>
     )
