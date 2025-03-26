@@ -1,7 +1,7 @@
 import DetailsBox from "../detailsbox"
 const InfoFlex = ({warning,streak}) => {
     return(
-        <div className="lg:w-[28%]  grid w-[95%] mx-auto">
+        <div className="lg:w-[28%]  grid w-[95%] mx-auto limitedSize:flex limitedSize:flex-col limitedSize:gap-13">
                 <DetailsBox 
                 className="w-full h-[162px]"
                 info="Streak Progress"

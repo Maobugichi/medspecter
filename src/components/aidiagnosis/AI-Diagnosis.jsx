@@ -70,7 +70,7 @@ const  AIdiag = () => {
     
     return(
         <div className="flex justify-around lg:flex-row flex-col  h-auto min-h-[120vh] lg:w-[85%] w-full">
-            <div className=" lg:w-[70%]  w-[95%] mx-auto h-auto grid min-h-[90vh]">
+            <div className=" lg:w-[70%]  w-[95%] mx-auto h-auto grid min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10">
                 <PolyCont
                  width="md:w-[97%] w-full"
                 />

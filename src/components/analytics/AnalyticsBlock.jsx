@@ -16,7 +16,7 @@ const AnalyticsBlock = ({docinfo}) => {
 
 
    return(
-     <div className="w-full flex  flex-wrap h-auto md:min-h-[25vh] min-h-[30vh] justify-between">
+     <div className="w-full flex  flex-wrap h-auto md:min-h-[25vh] min-h-[30vh] limitedSize:min-h-[10%] justify-between">
         {blocks}
      </div>
    )

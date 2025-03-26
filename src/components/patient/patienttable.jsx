@@ -47,7 +47,7 @@ const PatientTable = ({isInfo,setIsInfo}) => {
     
 
     return(
-        <div className="w-full  mx-auto ">
+        <div className="w-full  limitedSize:h-[75%] mx-auto ">
             <Keys
              info={isInfo}
              check={true}
@@ -56,7 +56,7 @@ const PatientTable = ({isInfo,setIsInfo}) => {
              width={width}
              contWidth="w-[95%]"
             />
-            <div className="">
+            <div className="grid h-[90%] gap-2">
               {tableList}
             </div>
             

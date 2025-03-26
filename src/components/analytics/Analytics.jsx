@@ -69,7 +69,7 @@ const Analytics = () => {
         )
     })
     return(
-        <div className="lg:w-[85%]  mx-auto w-[95%] grid gap-5 ">
+        <div className="lg:w-[85%] mx-auto w-[95%] grid gap-5 ">
             <AnalyticsBlock
              docinfo={docInfo}
             />

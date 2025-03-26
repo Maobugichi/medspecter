@@ -1,12 +1,14 @@
+import elli from "../../assets/elli.svg";
+import ellip from "../../assets/ellip.svg";
+import ellips from "../../assets/ellips.svg";
+
 const PieChart =  () => {
     return(
-        <svg width="350" height="260" className="">
-          <circle cx="170" cy="130" r="125" fill="#f0f0f0" />
-          <circle cx="170" cy="130" r="95" fill="#ffffff" /> 
-          <path d="M 230,40 A 100,100 0 0,1 278,140" stroke="black" stroke-width="20" fill="none" stroke-linecap="round" />
-        </svg>
-      
-
+      <div className=" h-60 relative">
+        <img className="absolute right-20 md:right-16" src={elli} alt="" />
+        <img className="absolute left-19 md:left-17" src={ellip} alt="" />
+        <img className="absolute left-18 md:left-16  bottom-6 md:bottom-7" src={ellips} alt="" />
+      </div>
     )
 }
 

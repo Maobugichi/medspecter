@@ -5,15 +5,15 @@ import { ContextProvider } from "../components/ContextProvider";
 
 const Root = () => {
     return(
-      <ContextProvider>
-        <div className="overflow-hidden w-full ">
+      
+        <div className="w-full flex flex-col gap-10 h-auto xl:min-h-[100vh]  overflow-hidden">
           <Header/>
           <div className="flex w-full">
            <SideNav/>
            <Outlet/>
           </div>
         </div>
-      </ContextProvider>  
+   
     )
 }
 

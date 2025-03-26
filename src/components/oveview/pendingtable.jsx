@@ -39,7 +39,7 @@ const PendingTable = () => {
         />
     ))
     return(
-        <div className="">
+        <div className="h-[80%] grid">
             {tableItems}
         </div>
     )

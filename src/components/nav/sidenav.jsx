@@ -1,16 +1,33 @@
 import { navItem } from "../../actions"
 import SideNavItem from "./sidenavItem"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ShowContext } from "../ContextProvider";
 
 const SideNav = () => {
     const [isActive, setIsActive] = useState(null);
-    const [isPath, setPath] = useState("");
-
     const { showNav , setShowNav } = useContext(ShowContext);
+    const [ isResize , setIsResize ] = useState(false)
+    const [ windowWidth , setWindowWidth ] = useState(window.innerWidth)
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        }
 
-    console.log(showNav)
+        window.addEventListener('resize' , handleResize);
+
+        return () => {
+            window.removeEventListener('resize' , handleResize);
+        }
+    },[window.innerWidth])
+
+    useEffect(() => {
+        if (windowWidth < 600) {
+            setIsResize(true);
+        } else if (windowWidth > 600) {
+            setIsResize(false)
+        }
+    },[windowWidth])
     function handleClick(e,id) {
         setShowNav(false)
         if (isActive) {
@@ -40,9 +57,9 @@ const SideNav = () => {
     ))
     return(
         <motion.nav
-        initial={{x:500}}
-        animate={{x:showNav ? 195 : 500}}
-        className="lg:left-0 lg:w-[18%] w-[50%] bg-red-400 fixed z-20 lg:relative h-auto min-h-[100vh]">
+        initial={{x:isResize && 500}}
+        animate={isResize && {x:showNav  ? 195 : 500}}
+        className="lg:left-0 lg:w-[18%] w-[50%] fixed z-20 lg:relative h-auto min-h-[100vh]">
             <ul className="list-none h-[400px] w-full  flex flex-col justify-between items-center">
              {items}
             </ul>
