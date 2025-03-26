@@ -23,7 +23,13 @@ const Analytics = () => {
  }, [])
 
   useEffect(() => {
-    console.log(windowWidth)
+
+    if (windowWidth < 600) {
+        setXAxis({
+          x:40,
+          x3:85
+        })
+    }
   },[windowWidth])
  const axis = [{ y:8,y2:11 , xLabel:120 } ,{ y:43, y2:48 , xLabel: 100 }, { y:80, y2:85 , xLabel:80 }, { y:118, y2:125 ,xLabel:60 }, { y:154 , y2:160, xLabel:40 } , { y:193, y2:198, xLabel:20 },{ y:237, y2:240 ,xLabel:0 }]
  const accuracyAxis = [{y2:25 , xLabel:"100%" } ,{ y2:65 , xLabel: "80%" }, { y2:105 , xLabel:"60%" }, { y2:145 ,xLabel:"40%" }, { y2:195, xLabel:"20%" } ]

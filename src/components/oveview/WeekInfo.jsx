@@ -14,7 +14,7 @@ const WeekInfo = () => {
     ))
 
     return(
-        <div className="flex w-full gap-2 h-auto min-h-[25vh] flex-wrap  lg:justify-between">
+        <div className="flex w-full gap-2 h-auto min-h-[25vh] flex-wrap lg:flex-nowrap lg:justify-between">
             {info}
         </div>
     )
