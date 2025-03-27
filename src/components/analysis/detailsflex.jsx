@@ -27,7 +27,7 @@ const DetailsFlex = ({show,setIsShow}) => {
     })
    
     return(
-        <div className="grid gap-3 lg:w-[40%] w-full lg:mr-5 limitedSize:flex limitedSize:flex-col limitedSize:gap-5">
+        <div className="grid gap-3 xl:w-[40%] lg:w-[95%] w-full lg:mr-5 limitedSize:flex limitedSize:flex-col limitedSize:gap-5">
             <DetailsBox 
              sel={true}
              info="Patient Details"

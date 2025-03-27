@@ -21,7 +21,6 @@ const  AIdiag = () => {
         const handleResize = () => {
             const width = window.innerWidth;
              setWindowWidth(width);
-
             if (width < 400) {
                 setXAxis({
                     x:20,
@@ -76,10 +75,10 @@ const  AIdiag = () => {
                
     
     return(
-        <div className="h-auto min-h-[120vh] lg:w-[85%] w-full grid gap-8">
+        <div className="h-auto min-h-[120vh] md:min-h-[100vh] lg:w-[85%] w-full md:w-[95%] md:mx-auto md:flex md:flex-col  lg:grid gap-8">
             <DiagHead/>
-            <div className="flex justify-around lg:flex-row flex-col w-full ">
-                <div className=" lg:w-[70%]  w-[95%] mx-auto h-auto grid min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">
+            <div className="flex gap-10 xl:flex-row flex-col w-full ">
+                <div className=" xl:w-[70%]  w-[95%] mx-auto h-auto flex flex-col lg:grid min-h-[80vh] md:min-h-[50vh] xl:min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">
                     <PolyCont
                     width="md:w-[97%] w-full"
                     />

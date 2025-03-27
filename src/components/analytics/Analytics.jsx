@@ -85,12 +85,12 @@ const Analytics = () => {
                 />
              </div>
 
-             <div className="flex flex-col md:flex-row w-full gap-5">
+             <div className="flex flex-col lg:flex-row w-full gap-5">
               <PolyCont
-               width="md:w-[60%] w-full"
+               width="lg:w-[60%] md:w-full w-full"
               />
                 <BarChart
-                  width="lg:w-[45%] w-full"
+                  width="lg:w-[45%] md:w-full w-full"
                   barItem={barItem2}
                   height="h-[303px]"
                   head="AI Accuracy Overview"

@@ -9,6 +9,10 @@ const SideNav = () => {
     const { showNav , setShowNav } = useContext(ShowContext);
     const [ isResize , setIsResize ] = useState(false)
     const [ windowWidth , setWindowWidth ] = useState(window.innerWidth)
+    const [ isX , setX ] = useState({
+        x:195,
+        xAu:500
+    })
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -22,10 +26,15 @@ const SideNav = () => {
     },[window.innerWidth])
 
     useEffect(() => {
-        if (windowWidth < 600) {
+        if (windowWidth < 850) {
             setIsResize(true);
-        } else if (windowWidth > 600) {
-            setIsResize(false)
+        } 
+
+        if (windowWidth > 600 && windowWidth < 850) {
+            setX({
+                x:500,
+                xAu:1000
+            })
         }
     },[windowWidth])
     function handleClick(e,id) {
@@ -57,8 +66,8 @@ const SideNav = () => {
     ))
     return(
         <motion.nav
-        initial={{x:isResize && 500}}
-        animate={isResize && {x:showNav  ? 195 : 500}}
+        initial={{x:isResize && isX.xAu}}
+        animate={isResize && {x:showNav  ?isX.x : isX.xAu}}
         className="lg:left-0 bg-white lg:w-[18%] w-[50%] fixed z-20 lg:relative h-auto min-h-[100vh]">
             <ul className="list-none h-[400px] w-full  flex flex-col justify-between items-center">
              {items}

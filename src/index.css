@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-@custom-variant limitedSize (@media (min-height: 1024px) and (min-width: 1440px));
-@custom-variant custom (@media (min-width: 400px) and (max-width: 500px));
-@custom-variant smallSize (@media (min-width: 385px) and (max-width: 390px));
-@custom-variant xtraSize (@media (min-width: 300px) and (max-width: 360px));
-@custom-variant xxSmall (@media (min-width: 370px) and (max-width: 380px))
+@custom-variant limitedSize (@media (max-width: 1440px));
+@custom-variant custom (@media (max-width: 500px));
+@custom-variant smallSize (@media (max-width: 390px));
+@custom-variant xtraSize (@media (max-width: 360px));
+@custom-variant xxSmall (@media (max-width: 380px));
+
 

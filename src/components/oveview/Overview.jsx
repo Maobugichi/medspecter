@@ -26,8 +26,8 @@ const Overview = () => {
 
   
     return(
-        <div className="lg:w-[85%] h-auto min-h-[130vh] limitedSize:h-full  flex flex-col lg:flex-row  md:gap-5 w-full ">
-            <div className="lg:w-[65%] w-[95%] h-auto min-h-[90vh] md:min-h-[100vh] limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
+        <div className="xl:w-[85%] h-auto min-h-[130vh] limitedSize:h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10">
+            <div className="xl:w-[65%] w-[95%] h-auto min-h-[90vh] md:min-h-[100vh] limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
                 <div className="flex flex-col justify-between h-[89%] limitedSize:h-[85%] ">
                  <WeekInfo/>
@@ -35,7 +35,7 @@ const Overview = () => {
                 </div>
                 
             </div>
-            <div className="lg:w-[35%] lg:h-[115vh] limitedSize:h-[85vh]  mt-14 w-full flex flex-col justify-between">
+            <div className="xl:w-[35%] xl:h-[115vh] limitedSize:h-[85vh] md:gap-10  xl:mt-14 w-full flex flex-col justify-between">
                 <Anomalies
                  show={isShow}
                  setIsShow={setIsShow}
@@ -43,7 +43,7 @@ const Overview = () => {
                 <DetailsBox
                  info="System Performance overview"
                  extra={true}
-                 className="h-[40%]"
+                 className="h-[40%] md:h-[45%]"
                 >
                  <div className="flex flex-col items-center justify-center  h-[75%] ">
                     <img className="w-[65%] h-[65%]" src={guage} alt="" />
