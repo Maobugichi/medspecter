@@ -6,8 +6,8 @@ const PieChart =  () => {
     return(
       <div className=" h-60 relative w-full ">
         <img className="absolute right-20 md:right-16 xtraSize:right-13 xxSmall:right-17 xxSmall:bottom-7" src={elli} alt="blue ellips" />
-        <img className="absolute left-25 md:left-17 smallSize:left-19" src={ellip} alt=" orange ellipses" />
-        <img className="absolute left-24 md:left-16 bottom-6 md:bottom-7 xxSmall:bottom-7 smallSize:left-18" src={ellips} alt="green ellipses" />
+        <img className="absolute left-25 md:left-17 smallSize:left-16" src={ellip} alt=" orange ellipses" />
+        <img className="absolute left-24 md:left-16 bottom-6 md:bottom-7 xxSmall:bottom-7 smallSize:left-16" src={ellips} alt="green ellipses" />
       </div>
     )
 }
