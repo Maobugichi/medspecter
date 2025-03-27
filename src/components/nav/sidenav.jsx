@@ -59,7 +59,7 @@ const SideNav = () => {
         <motion.nav
         initial={{x:isResize && 500}}
         animate={isResize && {x:showNav  ? 195 : 500}}
-        className="lg:left-0 lg:w-[18%] w-[50%] fixed z-20 lg:relative h-auto min-h-[100vh]">
+        className="lg:left-0 bg-white lg:w-[18%] w-[50%] fixed z-20 lg:relative h-auto min-h-[100vh]">
             <ul className="list-none h-[400px] w-full  flex flex-col justify-between items-center">
              {items}
             </ul>

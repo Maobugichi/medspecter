@@ -1,7 +1,4 @@
 import BarHeader from "./aidiagnosis/BarChartHeader";
-import { useState , useContext } from "react";
-import Bar from "./aidiagnosis/Bar";
-import { ShowContext } from "./ContextProvider";
 import Lines from "./Lines";
 const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,height,head,axis}) => {
     function handleChange(e) {

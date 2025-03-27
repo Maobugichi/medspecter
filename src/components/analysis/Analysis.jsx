@@ -8,12 +8,16 @@ const Analysis = () => {
     const [ isShow , setIsShow ] = useState(false)
    
     return(
-        <div className="flex lg:flex-row flex-col w-[95%] lg:w-[85%] mx-auto gap-5">
-            <ImageAnalysis/>
-            <DetailsFlex
-             show={isShow}
-             setIsShow={setIsShow}
-            />
+        <div className="w-[95%] lg:w-[85%] grid gap-4 mx-auto">
+            <h2 className="text-[24px] font-semibold">Image Analysis</h2>
+            <div className="flex lg:flex-row flex-col w-full mx-auto gap-5 ">
+              <ImageAnalysis/>
+                <DetailsFlex
+                show={isShow}
+                setIsShow={setIsShow}
+                />
+            </div>
+            
         </div>
     )
 }

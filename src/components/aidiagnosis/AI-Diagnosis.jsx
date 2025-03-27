@@ -7,6 +7,7 @@ import BarChart from "../BarChart"
 import InfoFlex from "./InfoFlex";
 import Bar from "./Bar"
 import PolyCont from "../PolyCont"
+import DiagHead from "./DiagHead"
 
 const  AIdiag = () => {
     const [ xAxis , setXAxis ] = useState({
@@ -21,11 +22,17 @@ const  AIdiag = () => {
             const width = window.innerWidth;
              setWindowWidth(width);
 
-            if (width < 600) {
+            if (width < 400) {
                 setXAxis({
                     x:20,
                     x2:20,
                     x3:68
+                })
+            } else if (width > 400 && width < 600) {
+                setXAxis({
+                    x:20,
+                    x2:20,
+                    x3:75
                 })
             }
         }
@@ -69,23 +76,27 @@ const  AIdiag = () => {
                
     
     return(
-        <div className="flex justify-around lg:flex-row flex-col  h-auto min-h-[120vh] lg:w-[85%] w-full">
-            <div className=" lg:w-[70%]  w-[95%] mx-auto h-auto grid min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10">
-                <PolyCont
-                 width="md:w-[97%] w-full"
-                />
-                <BarChart
-                 barItem={barItem}
-                 width="lg:w-[97%] w-full"
-                 height="h-[383px]"
-                 head="Progress Overtime"
-                 axis={axis}
+        <div className="h-auto min-h-[120vh] lg:w-[85%] w-full grid gap-8">
+            <DiagHead/>
+            <div className="flex justify-around lg:flex-row flex-col w-full ">
+                <div className=" lg:w-[70%]  w-[95%] mx-auto h-auto grid min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">
+                    <PolyCont
+                    width="md:w-[97%] w-full"
+                    />
+                    <BarChart
+                    barItem={barItem}
+                    width="lg:w-[97%] w-full"
+                    height="h-[383px]"
+                    head="Progress Overtime"
+                    axis={axis}
+                    />
+                </div>
+                <InfoFlex
+                streak={streak}
+                warning={warning}
                 />
             </div>
-            <InfoFlex
-             streak={streak}
-             warning={warning}
-            />
+           
         </div>
     )
 }

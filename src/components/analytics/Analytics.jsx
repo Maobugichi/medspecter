@@ -70,6 +70,7 @@ const Analytics = () => {
     })
     return(
         <div className="lg:w-[85%] mx-auto w-[95%] grid gap-5 ">
+          <h2 className="text-[24px] font-semibold">AI Diagnosis Report</h2>
             <AnalyticsBlock
              docinfo={docInfo}
             />
