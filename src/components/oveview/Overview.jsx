@@ -27,15 +27,15 @@ const Overview = () => {
   
     return(
         <div className="xl:w-[85%] h-auto min-h-[130vh] limitedSize:h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10">
-            <div className="xl:w-[65%] w-[95%] h-auto min-h-[90vh] md:min-h-[100vh] limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
+            <div className="xl:w-[65%] w-[95%]  h-auto min-h-[120vh] md:min-h-[80vh] lg:min-h-[130vh] smallSize:bg-amber-400 bg-yellow-200 limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
-                <div className="flex flex-col justify-between h-[89%] limitedSize:h-[85%] ">
+                <div className="flex flex-col gap-10 xl:justify-between h-[85%]  limitedSize:h-[85%] ">
                  <WeekInfo/>
                  <Pending/>
                 </div>
                 
             </div>
-            <div className="xl:w-[35%] xl:h-[115vh] limitedSize:h-[85vh] md:gap-10  xl:mt-14 w-full flex flex-col justify-between">
+            <div className="xl:w-[35%]   xl:h-[115vh] limitedSize:h-[85vh] md:gap-10  xl:mt-14 w-full flex flex-col justify-between">
                 <Anomalies
                  show={isShow}
                  setIsShow={setIsShow}

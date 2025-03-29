@@ -4,9 +4,8 @@ const ImageAnalysis = () => {
     return(
         <div>
            
-             <div className="lg:w-[95%] w-full bg-amber-200 h-full">
-            
-              <img src={mri} alt="MRI brain scan" />
+             <div className="lg:w-[95%] md:w-[95%]  w-full  h-full">
+              <img className="w-full" src={mri} alt="MRI brain scan" />
             </div>
         </div>
        
