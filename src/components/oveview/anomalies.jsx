@@ -4,7 +4,7 @@ import AnomalyHead from "../anomaly/anomlyhead"
 
 const Anomalies = ({show,setIsShow}) => {
     return(
-        <div className=" lg:w-full w-[95%] mx-auto  gap-5 flex flex-col p-3 rounded-md border border-[#E8E8E8] ">
+        <div className=" lg:w-full w-[95%] mx-auto  gap-5 flex flex-col p-3 rounded-md border border-solid border-[#E8E8E8] ">
           <AnomalyHead/>
           <AnomalyTable
            isShow={show}

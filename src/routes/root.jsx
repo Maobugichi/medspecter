@@ -8,7 +8,7 @@ const Root = () => {
       
         <div className="w-full flex flex-col gap-10 h-auto min-h-[150vh]   overflow-x-hidden">
           <Header/>
-          <div className="flex w-full  h-auto bg-green-300">
+          <div className="flex w-full  h-auto ">
            <SideNav/>
            <Outlet/>
           </div>
