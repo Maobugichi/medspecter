@@ -26,8 +26,8 @@ const Overview = () => {
 
   
     return(
-        <div className="xl:w-[85%] h-auto min-h-[130vh] limitedSize:h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10">
-            <div className="xl:w-[65%] w-[95%]  h-auto min-h-[120vh] md:min-h-[80vh] lg:min-h-[130vh] smallSize:bg-amber-400 bg-yellow-200 limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
+        <div className="xl:w-[85%] h-full xtraSize:bg-green-300 flex flex-col xl:flex-row gap-5 w-full md:pb-10 smallSize:bg-red-400">
+            <div className="xl:w-[65%] w-[95%]  h-auto min-h-[120vh] md:min-h-[80vh] lg:min-h-[130vh]   limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
                 <div className="flex flex-col gap-10 xl:justify-between h-[85%]  limitedSize:h-[85%] ">
                  <WeekInfo/>

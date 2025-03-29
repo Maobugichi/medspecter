@@ -6,9 +6,9 @@ import { ContextProvider } from "../components/ContextProvider";
 const Root = () => {
     return(
       
-        <div className="w-full flex flex-col gap-10 h-auto min-h-[100vh]  overflow-y-scroll overflow-x-hidden">
+        <div className="w-full flex flex-col gap-10 h-auto min-h-[150vh]   overflow-x-hidden">
           <Header/>
-          <div className="flex w-full bg-green-300 overflow-auto h-full">
+          <div className="flex w-full bg-green-300  h-full">
            <SideNav/>
            <Outlet/>
           </div>

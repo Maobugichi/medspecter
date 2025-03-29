@@ -1,7 +1,7 @@
 const PendingCases = ({id,name,diagnosis,date,status,bgColor,statusColor,statusText,doctor,number,treatment,width , spacing}) => {
     
     return(
-        <div className={`${bgColor} flex h-[41px] text-[11px]  lg:text-[14px] w-full  text-[#000000] ${spacing} items-center`}>
+        <div className={`${bgColor} flex h-[41px] text-[10px]  lg:text-[14px] w-full  text-[#000000] ${spacing} items-center`}>
             {id && <input className="w-2 md:w-10" type="checkbox" />}
             {id &&  <p className={`w-auto lg:min-w-[60px] flex  items-start `}>{id}</p>}
              <p className={` w-auto md:min-w-[120px] min-w-[68px]  flex items-start `}>{name}</p>    
