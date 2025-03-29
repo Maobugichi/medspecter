@@ -1,6 +1,6 @@
 const AnomalyPatients = ({id,name,d,content}) => {
     return(
-        <div className="flex h-[23px] border-b border-[#E8E8E8]  text-[12px] justify-between w-full">
+        <div className="flex h-8 border-b border-[#E8E8E8]  text-[12px] justify-between w-full">
             <div className="w-1/2 flex items-center gap-3">
                 <span className="bg-[#FC485A] h-[10px] w-[10px] rounded-full">
 
