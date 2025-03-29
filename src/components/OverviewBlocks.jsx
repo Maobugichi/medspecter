@@ -1,6 +1,6 @@
 const OverviewBlocks = ({src,text,arrSrc,percentage,amount,width}) => {
     return(
-        <div className={`${width} xl:h-[100%] lg:h-[70%] h-[48%] p-2 border-2 border-red-500 bg-red-400 grid place-items-center rounded-lg`}>
+        <div className={`${width} xl:h-[100%] lg:h-[70%] h-[48%] p-2  border-4 border-red-300 border-solid bg-red-400 grid place-items-center rounded-lg`}>
             <div className="flex lg:w-[90%] w-[90%] mx-auto text-[12px] justify-between xl:mt-5">
                 <div className="flex items-center gap-2 h-5  ">
                   <img className="w-[25%]" src={src} alt="" />
