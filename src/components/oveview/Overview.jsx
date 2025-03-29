@@ -26,7 +26,7 @@ const Overview = () => {
 
   
     return(
-        <div className="xl:w-[85%] h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10 smallSize:bg-red-400 bg-green-50">
+        <div className="xl:w-[85%] h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10 smallSize:bg-red-400 bg-red-50">
             <div className="xl:w-[65%] w-[95%]     limitedSize:h-[80vh] flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
                 <div className="flex flex-col gap-10 xl:justify-between h-[85%]  limitedSize:h-[85%] ">
@@ -35,7 +35,7 @@ const Overview = () => {
                 </div>
                 
             </div>
-            <div className="xl:w-[35%]   md:gap-10  xl:mt-14 w-full flex flex-col justify-between">
+            <div className="xl:w-[35%]   md:gap-10  xl:mt-14 w-full flex flex-col h-full justify-between">
                 <Anomalies
                  show={isShow}
                  setIsShow={setIsShow}
