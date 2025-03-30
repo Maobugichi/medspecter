@@ -19,8 +19,8 @@ const PatientTable = ({isInfo,setIsInfo}) => {
     },[])
 
     useEffect(() => {
-        if (windowWidth < 600) {
-            //setIsInfo(9)
+        if (windowWidth < 600) { //setIsInfo(9)
+            setCount(13)
         }
     },[windowWidth]) 
     

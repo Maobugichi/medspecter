@@ -9,24 +9,12 @@ const Keys = ({info,check , count , setCount , width , contWidth}) => {
       return keys
   })
 
-  useEffect(() => {
-    const handleResize = () => {
-      setInnerWidth(window.innerWidth);
-    }
-
-    window.addEventListener('resize',handleResize)
-
-    return () => {
-      window.removeEventListener('resize',handleResize)
-    }
-  },[])
-   
-  console.log("count" + " " + count)
+  
   const length = key[0].length - count;
   console.log(key[0]?.slice(0,length))
   return(
-    <div className={`flex h-[55px] ${contWidth}  justify-between  items-center  overflow-hidden`}>
-       {check &&<input className="w-10" type="checkbox" />}
+    <div className={`flex h-[55px] ${contWidth}  justify-between  items-center gap-4  overflow-hidden`}>
+       {check &&<input className="xl:w-10 w-2" type="checkbox" />}
       {
         key[0]?.slice(0,length).map((item,index) => {
           const widths = width[index]
