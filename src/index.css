@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --breakpoint-xs: 15rem
+    --breakpoint-xs: 20rem
 }
 
 @custom-variant limitedSize ((min-width: 1440px));

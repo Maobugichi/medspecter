@@ -46,7 +46,7 @@ const DetailsFlex = ({show,setIsShow}) => {
             </DetailsBox>
             <DetailsBox
               info="Diagnosis"
-              className="h-[270px] w-[96%]"
+              className="h-[270px] lg:w-[96%] w-full"
             >
             <DiagnosisBox
                 newItem={newItem ? newItem : prevItem}
@@ -55,7 +55,7 @@ const DetailsFlex = ({show,setIsShow}) => {
             </DetailsBox>
              <DetailsBox
                info="Recent History"
-               className="h-[270px] w-[96%]  "
+               className="h-[270px] lg:w-[96%]  w-full"
              >
                 {history}
                 <Button
