@@ -35,7 +35,7 @@ const Overview = () => {
                 </div>
                 
             </div>
-            <div className="xl:w-[35%] bg-blue-200  md:gap-10  xl:mt-14 w-full flex flex-col h-1/2 justify-between">
+            <div className="xl:w-[35%]   md:gap-10  xl:mt-14 w-full flex flex-col gap-5 h-1/2 justify-between">
                 <Anomalies
                  show={isShow}
                  setIsShow={setIsShow}

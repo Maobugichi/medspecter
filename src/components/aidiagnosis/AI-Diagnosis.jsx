@@ -75,7 +75,7 @@ const  AIdiag = () => {
                
     
     return(
-        <div className="h-auto min-h-[120vh] md:min-h-[100vh] lg:w-[85%] w-full md:w-[95%] md:mx-auto md:flex md:flex-col  lg:grid gap-8">
+        <div className="h-auto flex flex-col min-h-[120vh] md:min-h-[100vh] lg:w-[85%] w-full md:w-[95%] md:mx-auto md:flex md:flex-col  lg:grid gap-8">
             <DiagHead/>
             <div className="flex gap-10 xl:flex-row flex-col w-full ">
                 <div className=" xl:w-[70%]  w-[95%] mx-auto h-auto flex flex-col lg:grid min-h-[80vh] md:min-h-[50vh] xl:min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">

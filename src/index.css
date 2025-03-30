@@ -2,7 +2,6 @@
 
 @custom-variant limitedSize ((min-width: 1440px));
 @custom-variant smallSize (@media  (min-width: 390px) );
-@custom-variant xtraSize (@media (min-width: 360px) );
-@custom-variant xxSmall (@media (min-width: 380px) );
+
 
 

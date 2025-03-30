@@ -8,7 +8,7 @@ const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,heigh
     }
    
     return(
-        <div className={`${width} ${height} border border-[#ceced3] rounded-md grid place-items-center`}>
+        <div className={`${width} ${height} border border-solid border-[#ceced3] rounded-md grid place-items-center`}>
             <BarHeader
              entries={entries}
              selectedOption={selectedOption}

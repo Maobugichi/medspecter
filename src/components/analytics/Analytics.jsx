@@ -69,12 +69,12 @@ const Analytics = () => {
         )
     })
     return(
-        <div className="lg:w-[85%] mx-auto w-[95%] grid gap-5 ">
+        <div className="lg:w-[85%] mx-auto w-[95%] flex flex-col h-auto gap-5 ">
           <h2 className="text-[24px] font-semibold">AI Diagnosis Report</h2>
             <AnalyticsBlock
              docinfo={docInfo}
             />
-             <div className="flex lg:flex-row flex-col lg:justify-between gap-5">
+             <div className="flex h-auto lg:flex-row flex-col lg:justify-between gap-5">
                 <PieCont/>
                 <BarChart
                   width="lg:w-[65%] "
@@ -85,7 +85,7 @@ const Analytics = () => {
                 />
              </div>
 
-             <div className="flex flex-col lg:flex-row w-full gap-5">
+             <div className="flex flex-col h-auto lg:flex-row w-full gap-5">
               <PolyCont
                width="lg:w-[60%] md:w-full w-full"
               />

@@ -21,7 +21,7 @@ const PatientList = () => {
 
   
     return(
-        <div className="lg:grid limitedSize:flex  limitedSize:gap-10 h-[80vh] flex flex-col  gap-10 lg:gap-2 lg:w-[85%] w-[95%] mx-auto ">
+        <div className="lg:grid limitedSize:flex bg-red-300 limitedSize:gap-10 h-full flex flex-col  gap-10 lg:gap-2 lg:w-[85%] w-[95%] mx-auto ">
             <PatientHeader
              isOpen={isOpen}
              setIsOpen={setIsOpen}

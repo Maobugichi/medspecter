@@ -7,7 +7,7 @@ const Pending = () => {
     const [ count , setCount ] = useState(4) 
     const [width, setWidth] = useState(["w-[130px]" , "w-[110px]","w-[110px]","w-[90px]"]);
     return(
-        <div className="w-full h-[74%] lg:h-auto   lg:w-full lg:p-4 rounded-md border lg:text-[14px] border-[#E8E8E8] p-3 ">
+        <div className="w-full h-[74%] lg:h-auto   lg:w-full lg:p-4 rounded-md border border-solid lg:text-[14px] border-[#E8E8E8] p-3 ">
             <PendingHead/>
             <Keys
              info={patientInfo}

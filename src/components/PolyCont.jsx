@@ -24,7 +24,7 @@ const PolyCont = ({width}) => {
     )
   })
     return(
-        <div className={`${width} relative  h-[303px] grid place-items-center rounded-md border border-[#ceced3]`}>
+        <div className={`${width} relative  h-[303px] grid place-items-center rounded-md border border-solid border-[#ceced3]`}>
           <div className="flex justify-between w-[90%] h-[30%] ">
             <div>
               <h3 className="text-[14px]">Progress Overtime</h3>
