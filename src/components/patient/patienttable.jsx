@@ -56,7 +56,7 @@ const PatientTable = ({isInfo,setIsInfo}) => {
              width={width}
              contWidth="w-[95%]"
             />
-            <div className="grid h-[90%] gap-2">
+            <div className="grid w-full  overflow-hidden h-[90%] gap-2">
               {tableList}
             </div>
             
