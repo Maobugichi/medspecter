@@ -63,7 +63,7 @@ const  AIdiag = () => {
               y={260 - item.value}
               height={item.value}
               label={item.label}
-              labelY={275}
+              labelY={270}
               labelX={10}
               width={49.59}
               fill="#357AF6"
