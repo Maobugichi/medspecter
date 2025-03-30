@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+    --breakpoint-xs: 390px
+}
+
 @custom-variant limitedSize ((min-width: 1440px));
-@custom-variant smallSize (@media  (min-width: 390px) );
+
 
 
 
