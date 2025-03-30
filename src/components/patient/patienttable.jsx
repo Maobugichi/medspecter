@@ -19,7 +19,7 @@ const PatientTable = ({isInfo,setIsInfo}) => {
     },[])
 
     useEffect(() => {
-        if (windowWidth < 600) { //setIsInfo(9)
+        if (windowWidth < 600) { 
             setCount(13)
         }
     },[windowWidth]) 
@@ -36,7 +36,7 @@ const PatientTable = ({isInfo,setIsInfo}) => {
               status={windowWidth > 600 ? item.status : null}
               doctor={windowWidth > 600 ? item.doctor : null}
               number={windowWidth > 600 ? item.number : null}
-              bgColor={windowWidth > 600 && item.bgColor}
+              bgColor={item.bgColor}
               statusColor={windowWidth > 600 && item.statusColor}
               statusText={item.statusText}
               width={widths}
@@ -47,7 +47,7 @@ const PatientTable = ({isInfo,setIsInfo}) => {
     
 
     return(
-        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto ">
+        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto p-2">
             <Keys
              info={isInfo}
              check={true}

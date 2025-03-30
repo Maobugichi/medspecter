@@ -14,7 +14,7 @@ const Header = () => {
 
    
     return(
-        <header className="w-full h-20 grid border-b">
+        <header className="w-full h-20 grid border-b border-solid border-[#E8E8E8]">
             <nav className="flex  items-center lg:w-full w-[90%] mx-auto justify-between  h-full">
                 <div className="lg:w-[20%] w-[40%] ">
                     <img src={logo} alt="med spectre logo" />
