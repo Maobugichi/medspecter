@@ -21,8 +21,9 @@ const DetailsFlex = ({show,setIsShow}) => {
 
     const history = isHistory[0].history.slice(0,3).map(item => {
         return <History
-         date={item.date}
-         treatment={item.treatment}
+          key={item.id}
+          date={item.date}
+          treatment={item.treatment}
         />
     })
    

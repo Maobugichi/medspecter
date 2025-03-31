@@ -28,26 +28,27 @@ const PatientTable = ({isInfo,setIsInfo}) => {
         const widths = contWidth[i]
         return (
              <PendingCases
+              key={item.id}
               id={item.id}
               name={item.name}
               date={item.date}
               diagnosis={item.diagnosis}
               treatment={item.treatment}
               status={windowWidth > 600 ? item.status : null}
-              doctor={windowWidth > 600 ? item.doctor : null}
-              number={windowWidth > 600 ? item.number : null}
+              doctor={windowWidth > 800 ? item.doctor : null}
+              number={windowWidth > 800 ? item.number : null}
               bgColor={item.bgColor}
               statusColor={windowWidth > 600 && item.statusColor}
               statusText={item.statusText}
               width={widths}
-              spacing="md:gap-5 gap-3 smallSize:gap-2"
+              spacing="md:gap-5 gap-2.5 smallSize:gap-2"
         />
    
     )})
     
 
     return(
-        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto p-2">
+        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto p-1">
             <Keys
              info={isInfo}
              check={true}

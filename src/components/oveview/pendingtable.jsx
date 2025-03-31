@@ -35,7 +35,7 @@ const PendingTable = () => {
          statusColor={patient.statusColor}
          statusText={patient.statusText}
          width={patient.width}
-         spacing="justify-between"
+         spacing="justify-between gap-3"
         />
     ))
     return(

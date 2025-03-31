@@ -11,7 +11,6 @@ const Keys = ({info,check , count , setCount , width , contWidth}) => {
 
   
   const length = key[0].length - count;
-  console.log(key[0]?.slice(0,length))
   return(
     <div className={`flex h-[55px] ${contWidth}  justify-between  items-center gap-4  overflow-hidden`}>
        {check &&<input className="xl:w-10 w-4" type="checkbox" />}
