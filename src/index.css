@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
-@theme {
-    --breakpoint-xs: 300px
-}
+@media (max-width: 390px) {
+    .cus {
+        background-color: red;
+    }
+  }
+  
+  
 
 @custom-variant limitedSize ((min-width: 1440px));
 
