@@ -34,7 +34,7 @@ const Analytics = () => {
  const axis = [{ y:8,y2:11 , xLabel:120 } ,{ y:43, y2:48 , xLabel: 100 }, { y:80, y2:85 , xLabel:80 }, { y:118, y2:125 ,xLabel:60 }, { y:154 , y2:160, xLabel:40 } , { y:193, y2:198, xLabel:20 },{ y:237, y2:240 ,xLabel:0 }]
  const accuracyAxis = [{y2:25 , xLabel:"100%" } ,{ y2:65 , xLabel: "80%" }, { y2:105 , xLabel:"60%" }, { y2:145 ,xLabel:"40%" }, { y2:195, xLabel:"20%" } ]
     const barItem = docInfo.slice(0,1)[0]?.data[selectedOption && selectedOption].map((item,i) => {
-        const x = i === 0 ? 28 :  25 + (i * 63); 
+        const x = i === 0 ? 30 :  30 + (i * 73); 
         return(
             <Bar
               x={x}
@@ -70,7 +70,7 @@ const Analytics = () => {
     })
     return(
         <div className="lg:w-[85%] mx-auto w-[95%] flex flex-col h-auto gap-5 ">
-          <h2 className="text-[24px] font-semibold">AI Diagnosis Report</h2>
+          <h2 className="text-[24px] font-semibold w-[95%] mx-auto">Analytics</h2>
             <AnalyticsBlock
              docinfo={docInfo}
             />
