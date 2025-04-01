@@ -39,7 +39,7 @@ const PendingTable = () => {
         />
     ))
     return(
-        <div className="h-[80%] grid">
+        <div className="h-[90%] grid gap-3">
             {tableItems}
         </div>
     )

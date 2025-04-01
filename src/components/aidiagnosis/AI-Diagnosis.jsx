@@ -11,8 +11,8 @@ import DiagHead from "./DiagHead"
 
 const  AIdiag = () => {
     const [ xAxis , setXAxis ] = useState({
-        x:90,
-        x2:85,
+        x:30,
+        x2:30,
         x3:120
     })
     const [ windowWidth , setWindowWidth ] = useState(window.innerWidth)
@@ -23,9 +23,9 @@ const  AIdiag = () => {
              setWindowWidth(width);
             if (width < 400) {
                 setXAxis({
-                    x:20,
-                    x2:20,
-                    x3:68
+                    x:25,
+                    x2:23,
+                    x3:72
                 })
             } else if (width > 400 && width < 600) {
                 setXAxis({

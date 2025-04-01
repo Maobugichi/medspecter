@@ -10,10 +10,12 @@ const ImageAnalysis = () => {
         img.src = mri;
         img.onload = () => setImageLoaded(true)
     },[])
+
+
     return(
         <div>
-             <div className="lg:w-[95%] md:w-[95%]  mx-auto w-full  h-full">
-             {imageLoaded ? <img className="w-full" src={mri} alt="MRI brain scan" /> : <Skeleton/>}
+             <div className="lg:w-[95%] md:w-[95%]  mx-auto w-full  h-full ">
+             {imageLoaded ? <img className="w-full h-full" src={mri} alt="MRI brain scan" /> : <Skeleton/>}
             </div>
         </div>
        
