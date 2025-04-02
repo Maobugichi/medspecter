@@ -38,8 +38,8 @@ const PendingTable = ({variants}) => {
          spacing="justify-between gap-3 h-[41px]"
          variants={variants}
          transition={{
-            duration: 0.5,
-            delay: (i * 0.5),
+            duration: 0.3,
+            delay: (i * 0.3),
           }}
         />
     ))

@@ -19,8 +19,14 @@ const PatientList = () => {
         }
     },[])
 
+    const variants = {
+        visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
+        hidden: {opacity: 0, scale: 0}
+    }
+
   
     return(
+        
         <div className="lg:grid limitedSize:flex  limitedSize:gap-10 h-full flex flex-col  gap-10 lg:gap-2 lg:w-[85%] w-[95%] mx-auto ">
             <PatientHeader
              isOpen={isOpen}
@@ -32,6 +38,7 @@ const PatientList = () => {
             <PatientTable
               isInfo={isInfo}
               setIsInfo={setIsInfo}
+              variants={variants}
             />
         </div>
     )

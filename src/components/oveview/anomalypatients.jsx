@@ -1,6 +1,26 @@
 import { motion } from "motion/react"
+import { useEffect, useState } from "react"
 
 const AnomalyPatients = ({id,name,d,content, variants}) => {
+    const [ fontSize , setFontSize ] = useState('12px');
+    const [windowWidth , setWindowWidth] = useState(window.innerWidth)
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize' , handleResize);
+
+        return () => {
+            window.removeEventListener('resize' , handleResize)
+        }
+    },[window.innerWidth])
+
+    useEffect(() => {
+        if (windowWidth < 600) {
+            setFontSize("10px")
+        }
+    }, [windowWidth])
     const transition = {
         duration: 0.8,
         delay: 0.5,
@@ -8,14 +28,11 @@ const AnomalyPatients = ({id,name,d,content, variants}) => {
         type:"tween"
     }
 
-   
-  
     return(
         <motion.div
-        initial={{height: 0 , fontSize: 0 , borderBottom: "none"}}
-        whileInView={{height: 30 , fontSize: "12px" , transition: transition , borderBottom:"solid" , borderWidth:0.5 , borderColor:"#E8E8E8 ", borderTop:"none", borderLeft:"none", borderRight:"none" }}
-       
-        className="flex    justify-between w-full">
+         initial={{height: 0 , fontSize: 0 , borderBottom: "none"}}
+         whileInView={{height: 30 , fontSize: fontSize , transition: transition , borderBottom:"solid" , borderWidth:0.5 , borderColor:"#E8E8E8 ", borderTop:"none", borderLeft:"none", borderRight:"none" }}
+         className="flex    justify-between w-full">
             <div className="w-1/2 flex items-center gap-3">
                 <motion.span 
                  variants={variants}

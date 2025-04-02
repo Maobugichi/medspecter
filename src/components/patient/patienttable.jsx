@@ -1,7 +1,7 @@
 import PendingCases from "../pendingcases";
 import Keys from "../keys";
 import { useEffect, useState, useRef } from "react";
-const PatientTable = ({isInfo,setIsInfo}) => {
+const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     const [thisInfo, setIsThisInfo] = useState(isInfo)
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
     const [ count , setCount ] = useState(10) 
@@ -41,7 +41,12 @@ const PatientTable = ({isInfo,setIsInfo}) => {
               statusColor={windowWidth > 600 && item.statusColor}
               statusText={item.statusText}
               width={widths}
-              spacing="md:gap-5 gap-3 smallSize:gap-2 h-16"
+              variants={variants}
+              transition={{
+                duration: 0.2,
+                delay: (i * 0.2),
+              }}
+              spacing="md:gap-5 gap-1 smallSize:gap-2 h-16"
         />
    
     )})

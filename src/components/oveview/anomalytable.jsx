@@ -33,7 +33,7 @@ const AnomalyTable = ({isShow , variants}) => {
     return(
         <motion.div 
         initial={{height:0}}
-        animate={{height : isShow ? 400 : "auto"}}
+        animate={{height : isShow ? 400 : 250}}
         transition={transition}
         className="h-auto  grid gap-1">
             {anomaly}

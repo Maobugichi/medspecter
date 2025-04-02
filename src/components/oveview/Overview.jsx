@@ -22,7 +22,7 @@ const Overview = () => {
         } else if (hour > 15) {
             setGreet("Good evening")
         }
-    })
+    },[])
 
     const variants = {
         visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
