@@ -12,7 +12,7 @@ const DetailsBox = ({info,children,sel,selectedOption, setSelectedOptions,handle
                 selectedOption={selectedOption}
                 setSelectedOptions={setSelectedOptions}
                 handleChange={handleChange}
-                className="text-sm border p-3 border-[#C4C4C4] rounded-md"
+                className="text-sm border p-3 border-[#C4C4C4] border-solid rounded-md"
                 sliceInfo={sliceInfo}
               />}
             </div>

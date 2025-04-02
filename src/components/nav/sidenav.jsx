@@ -3,6 +3,8 @@ import SideNavItem from "./sidenavItem"
 import { useContext, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ShowContext } from "../ContextProvider";
+import Profile from "../header/profile";
+import ThemeNoti from "../header/themenoti";
 
 const SideNav = () => {
     const [isActive, setIsActive] = useState(null);
@@ -69,6 +71,10 @@ const SideNav = () => {
         initial={{x:isResize && isX.xAu}}
         animate={isResize && {x:showNav  ?isX.x : isX.xAu}}
         className="lg:left-0 bg-white lg:w-[18%] w-[50%] fixed z-20 lg:relative h-auto min-h-[100vh]">
+            <div className="w-[95%]  flex flex-col gap-5 justify-between">
+              <ThemeNoti/>
+              <Profile/>
+            </div>
             <ul className="list-none h-[400px] w-full  flex flex-col justify-between items-center">
              {items}
             </ul>

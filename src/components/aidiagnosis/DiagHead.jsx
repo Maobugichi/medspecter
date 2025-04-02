@@ -14,7 +14,7 @@ const DiagHead = () => {
     return(
         <div className=" h-20 grid gap-5 w-[90%] mx-auto lg:w-full">
             <h2 className="text-[20px] md:text-[24px] font-semibold">AI Diagnosis Report</h2>
-            <div className="flex justify-between w-full">
+            <div className="flex justify-between w-full items-center">
               <h3 className="text-[12px] md:text-[16px] font-semibold">Patient Progress/Streak</h3> 
 
               <Select
@@ -22,7 +22,7 @@ const DiagHead = () => {
                 selectedOption={selectedOption}
                 setSelectedOptions={setSelectedOptions}
                 handleChange={handleChange}
-                className="text-sm border md:p-3 border-[#C4C4C4] border-solid rounded-md"
+                className="text-sm border p-2 md:p-3 border-[#C4C4C4] border-solid rounded-md"
                 sliceInfo={sliceInfo} />
         </div>
         </div>

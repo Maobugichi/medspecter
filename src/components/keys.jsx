@@ -12,7 +12,7 @@ const Keys = ({info,check , count , setCount , width , contWidth}) => {
   
   const length = key[0].length - count;
   return(
-    <div className={`flex h-[55px] w-full justify-between ${check && "bg-[#1E40AF05]"}  items-center gap-4  overflow-hidden border-b border-solid border-[#E8E8E8]`}>
+    <div className={`flex h-[55px] w-full justify-between ${check && "bg-[#1E40AF05]"}  items-center gap-4  overflow-hidden border-b border-solid border-[#E8E8E8] p-2`}>
        {check &&<input className="xl:w-10 w-4" type="checkbox" />}
       {
         key[0]?.slice(0,length).map((item,index) => {
