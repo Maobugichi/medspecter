@@ -13,14 +13,14 @@ const AnomalyPatients = ({id,name,d,content, variants}) => {
     return(
         <motion.div
         initial={{height: 0 , fontSize: 0 , borderBottom: "none"}}
-        animate={{height: 30 , fontSize: "12px" , transition: transition , borderBottom:"solid" , borderWidth:0.5 , borderColor:"#E8E8E8 ", borderTop:"none", borderLeft:"none", borderRight:"none" }}
+        whileInView={{height: 30 , fontSize: "12px" , transition: transition , borderBottom:"solid" , borderWidth:0.5 , borderColor:"#E8E8E8 ", borderTop:"none", borderLeft:"none", borderRight:"none" }}
        
         className="flex    justify-between w-full">
             <div className="w-1/2 flex items-center gap-3">
                 <motion.span 
                  variants={variants}
                  initial="hidden"
-                 animate="visible"
+                 whileInView="visible"
                  transition={{times: [0, 0.3, 1],  delay:0.8}}
                  className="bg-[#FC485A] h-[10px] w-[10px] rounded-full">
 
@@ -30,7 +30,7 @@ const AnomalyPatients = ({id,name,d,content, variants}) => {
             <motion.div 
              variants={variants}
              initial="hidden"
-             animate="visible"
+             whileInView="visible"
              transition={{times: [0, 0.3, 1],  delay:0.8}}
              className="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width={20} height={15} viewBox="0 0 256 256"><path fill="#2e2a2a" d={d}></path></svg>

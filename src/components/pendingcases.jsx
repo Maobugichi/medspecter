@@ -5,7 +5,7 @@ const PendingCases = ({id,name,diagnosis,date,status,bgColor,statusColor,statusT
         <motion.div 
         variants={variants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         transition={transition}
         className={`${bgColor} flex  text-[10px]  lg:text-[14px] w-full  text-[#000000] ${spacing} items-center p-2`}>
             {id && <input className="w-2 md:w-10" type="checkbox" />}
