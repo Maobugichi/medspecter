@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { patientInfo } from "../../actions";
 import PendingCases from "../pendingcases";
 
-const PendingTable = () => {
+const PendingTable = ({variants}) => {
     const [info, setInfo] = useState(patientInfo.slice(0,9))
     const [windowWidth , setWindowWidth] = useState(window.innerWidth)
 
@@ -23,7 +23,7 @@ const PendingTable = () => {
             setInfo(patientInfo.slice(0,9))
         }
     },[windowWidth])
-    const tableItems = info.map(patient => (
+    const tableItems = info.map((patient, i) => (
         <PendingCases
          key={patient.id}
          id={patient.id}
@@ -35,7 +35,12 @@ const PendingTable = () => {
          statusColor={patient.statusColor}
          statusText={patient.statusText}
          width={patient.width}
-         spacing="justify-between gap-3"
+         spacing="justify-between gap-3 h-[41px]"
+         variants={variants}
+         transition={{
+            duration: 0.5,
+            delay: (i * 0.5),
+          }}
         />
     ))
     return(

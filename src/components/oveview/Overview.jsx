@@ -24,14 +24,24 @@ const Overview = () => {
         }
     })
 
+    const variants = {
+        visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
+        hidden: {opacity: 0, scale: 0}
+    }
+
+
   
     return(
         <div className="xl:w-[85%] h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10 ">
             <div className="xl:w-[65%] w-[95%]  h-1/2 flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
                 <div className="flex flex-col gap-16 xl:justify-between h-[85%]  limitedSize:h-[85%] ">
-                 <WeekInfo/>
-                 <Pending/>
+                 <WeekInfo
+                  variants={variants}
+                 />
+                 <Pending
+                  variants={variants}
+                 />
                 </div>
                 
             </div>
@@ -39,6 +49,7 @@ const Overview = () => {
                 <Anomalies
                  show={isShow}
                  setIsShow={setIsShow}
+                 variants={variants}
                 />
                 <DetailsBox
                  info="System Performance overview"

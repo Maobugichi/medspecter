@@ -3,7 +3,7 @@ import PendingHead from "./pendinghead"
 import PendingTable from "./pendingtable"
 import { patientInfo } from "../../actions"
 import { useState } from "react"
-const Pending = () => {
+const Pending = ({variants}) => {
     const [ count , setCount ] = useState(4) 
     const [width, setWidth] = useState(["w-[130px]" , "w-[110px]","w-[110px]","w-[90px]"]);
     return(
@@ -16,7 +16,9 @@ const Pending = () => {
              setCount={setCount}
              contWidth="w-full"
             />
-            <PendingTable/>
+            <PendingTable
+             variants={variants}
+            />
         </div>
     )
 }

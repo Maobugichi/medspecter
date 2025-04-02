@@ -1,15 +1,22 @@
 import OverviewBlocks from "../OverviewBlocks"
 import { weekInfo } from "../../actions"
 
-const WeekInfo = () => {
-    const info = weekInfo.map(info => (
+const WeekInfo = ({variants}) => {
+    const info = weekInfo.map((info , i) => (
         <OverviewBlocks
+         key={info.src}
          src={info.src}
          amount={info.amount}
          percentage={info.percentage}
          text={info.text}
          arrSrc={info.arrSrc}
          width="lg:w-[33%] w-[45%]"
+         transition={{
+            duration: 0.5,
+            delay: (i * 0.5),
+          }}
+          variants={variants}
+      
         />
     ))
 

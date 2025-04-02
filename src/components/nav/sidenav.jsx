@@ -71,7 +71,7 @@ const SideNav = () => {
         initial={{x:isResize && isX.xAu}}
         animate={isResize && {x:showNav  ?isX.x : isX.xAu}}
         className="lg:left-0 bg-white lg:w-[18%] w-[50%] fixed z-20 lg:relative h-auto min-h-[100vh]">
-            <div className="w-[95%]  flex flex-col gap-5 justify-between">
+            <div className="w-[95%] lg:hidden flex flex-col gap-5 justify-between">
               <ThemeNoti/>
               <Profile/>
             </div>
