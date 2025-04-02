@@ -22,7 +22,7 @@ const PatientHeader = ({isOpen,setIsOpen,isInfo,setIsInfo}) => {
                  fill={pending[0].fill}
                  onClick={handleClick}
                 />
-                <div className="h-[36px] w-[36px] border border-[#E4E4E4] rounded-md grid place-items-center">
+                <div className="h-[36px] w-[36px] border border-[#E4E4E4] border-solid rounded-md grid place-items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 256 256"><path fill="#2e2a2a" d="M118 60a10 10 0 1 1 10 10a10 10 0 0 1-10-10m10 58a10 10 0 1 0 10 10a10 10 0 0 0-10-10m0 68a10 10 0 1 0 10 10a10 10 0 0 0-10-10"></path></svg>
                 </div>
             </div>
