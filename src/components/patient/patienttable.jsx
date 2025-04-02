@@ -46,7 +46,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
                 duration: 0.2,
                 delay: (i * 0.2),
               }}
-              spacing="md:gap-5 gap-1 smallSize:gap-2 h-16"
+              spacing="md:gap-5 gap-2.5 smallSize:gap-2 h-16"
         />
    
     )})

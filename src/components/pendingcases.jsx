@@ -6,6 +6,7 @@ const PendingCases = ({id,name,diagnosis,date,status,bgColor,statusColor,statusT
         variants={variants}
         initial="hidden"
         whileInView="visible"
+        viewport={{once:true}}
         transition={transition}
         className={`${bgColor} flex  text-[10px]  lg:text-[14px] w-full  text-[#000000] ${spacing} items-center p-2`}>
             {id && <input className="w-2 md:w-10" type="checkbox" />}
