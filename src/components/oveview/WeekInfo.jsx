@@ -12,8 +12,12 @@ const WeekInfo = ({variants}) => {
          arrSrc={info.arrSrc}
          width="lg:w-[33%] w-[45%]"
          transition={{
-            duration: 0.5,
+            duration: 1.5,
             delay: (i * 0.5),
+            type:"spring",
+            bounce: 0.5 ,
+           
+            stiffness: 50
           }}
           variants={variants}
       

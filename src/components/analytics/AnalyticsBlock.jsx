@@ -1,7 +1,7 @@
 import OverviewBlocks from "../OverviewBlocks"
 import { docInfo } from "../../actions"
 const AnalyticsBlock = ({docinfo}) => {
-   const blocks = docinfo.map(info => {
+   const blocks = docinfo.map((info,i) => {
     return(
         <OverviewBlocks
          src={info.src}
@@ -10,6 +10,13 @@ const AnalyticsBlock = ({docinfo}) => {
          text={info.text}
          arrSrc={info.arrSrc}
          width="w-[48%] lg:w-[23%]"
+         transition={{
+            duration: 1.5,
+            delay: (i * 0.5),
+            type:"spring",
+            bounce: 0.5 ,
+            stiffness: 50
+          }}
        />
     )
    })

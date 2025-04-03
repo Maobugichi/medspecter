@@ -25,7 +25,7 @@ const Overview = () => {
     },[])
 
     const variants = {
-        visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
+        visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] } ,
         hidden: {opacity: 0, scale: 0}
     }
 
