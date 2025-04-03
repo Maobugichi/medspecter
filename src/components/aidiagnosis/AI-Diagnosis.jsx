@@ -11,10 +11,15 @@ import DiagHead from "./DiagHead"
 
 const  AIdiag = () => {
     const [ xAxis , setXAxis ] = useState({
-        x:30,
-        x2:30,
-        x3:120
+        x:100,
+        x2:100,
+        x3:100
     })
+    const [ scale , setScale ] = useState('scale(0.85)');
+    const [ svgAttri , setSvgAttri ] = useState({
+        height:196,
+        width: 650
+      });
     const [ windowWidth , setWindowWidth ] = useState(window.innerWidth)
 
     useEffect(() => {
@@ -41,7 +46,7 @@ const  AIdiag = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
         }
-    },[])
+    },[windowWidth])
 
    
     const { newItem , sliceInfo } = useContext(ShowContext)
@@ -69,9 +74,11 @@ const  AIdiag = () => {
               fill="#357AF6"
               setSelectedOptions={setSelectedOptions}
               entries={entries}
+             
             />
         )
     })
+
                
     
     return(
@@ -80,7 +87,11 @@ const  AIdiag = () => {
             <div className="flex gap-10 xl:flex-row flex-col w-full ">
                 <div className=" xl:w-[85%]  w-[95%]  mx-auto h-auto flex flex-col lg:grid min-h-[80vh] md:min-h-[50vh] xl:min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">
                     <PolyCont
-                    width="lg:w-full w-full mx-auto"
+                     width="lg:w-full w-full mx-auto"
+                     scale={scale}
+                     svgAttri={svgAttri}
+                     top="lg:top-20"
+                     setSvgAttri={setSvgAttri}
                     />
                     <BarChart
                     barItem={barItem}
@@ -88,6 +99,7 @@ const  AIdiag = () => {
                     height="h-[383px]"
                     head="Progress Overtime"
                     axis={axis}
+                    windowWidth={windowWidth}
                     />
                 </div>
                 <InfoFlex

@@ -1,5 +1,4 @@
-import { delay } from "motion"
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 const PieChart =  () => {
 
@@ -15,20 +14,22 @@ const PieChart =  () => {
           <g class="layer">
             <title>Layer 1</title>
             <motion.path 
-               variants={draw}
-               initial="initial"
-               animate="animate"
-               d="M107.28,6.6c0,-3.64 2.96,-6.62 6.6,-6.4c25.15,1.56 49.03,11.95 67.34,29.46c19.91,19.03 31.71,45.01 32.95,72.53c1.24,27.51 -8.18,54.45 -26.3,75.19c-16.66,19.09 -39.51,31.58 -64.42,35.39c-3.6,0.55 -6.82,-2.15 -7.14,-5.78l-1.22,-13.49c-0.33,-3.63 2.36,-6.81 5.95,-7.44c18.05,-3.14 34.55,-12.38 46.68,-26.27c13.59,-15.56 20.66,-35.76 19.73,-56.4c-0.93,-20.64 -9.78,-40.12 -24.71,-54.4c-13.34,-12.75 -30.61,-20.46 -48.86,-21.97c-3.64,-0.3 -6.6,-3.23 -6.6,-6.87l0,-13.55z"
-               fill="#3371EB" 
-               stroke="#3371EB"
-               strokeWidth="2"
-               strokeLinecap="round"
-               strokeLinejoin="round"
-               id="svg_1"/>
+              variants={draw}
+              initial="initial"
+              whileInView="animate"
+              viewport={{once: true}}
+              d="M107.28,6.6c0,-3.64 2.96,-6.62 6.6,-6.4c25.15,1.56 49.03,11.95 67.34,29.46c19.91,19.03 31.71,45.01 32.95,72.53c1.24,27.51 -8.18,54.45 -26.3,75.19c-16.66,19.09 -39.51,31.58 -64.42,35.39c-3.6,0.55 -6.82,-2.15 -7.14,-5.78l-1.22,-13.49c-0.33,-3.63 2.36,-6.81 5.95,-7.44c18.05,-3.14 34.55,-12.38 46.68,-26.27c13.59,-15.56 20.66,-35.76 19.73,-56.4c-0.93,-20.64 -9.78,-40.12 -24.71,-54.4c-13.34,-12.75 -30.61,-20.46 -48.86,-21.97c-3.64,-0.3 -6.6,-3.23 -6.6,-6.87l0,-13.55z"
+              fill="#3371EB" 
+              stroke="#3371EB"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              id="svg_1"/>
             <motion.path 
              variants={draw}
              initial="initial"
-             animate="animate"
+             whileInView="animate"
+             viewport={{once: true}}
              d="m99.06,6.94c-0.29,-3.63 -3.49,-6.36 -7.1,-5.84c-18.94,2.74 -36.85,10.52 -51.81,22.58c-14.97,12.06 -26.38,27.9 -33.09,45.83c-1.27,3.41 0.71,7.11 4.2,8.18l12.95,3.95c3.49,1.07 7.15,-0.91 8.5,-4.3c5.1,-12.81 13.43,-24.13 24.22,-32.83c10.8,-8.7 23.63,-14.43 37.23,-16.68c3.6,-0.6 6.31,-3.76 6.01,-7.39l-1.11,-13.5z" 
              fill="#FF8E26"
              stroke="#FF8E26"
@@ -39,7 +40,8 @@ const PieChart =  () => {
             <motion.path 
              variants={draw}
              initial="initial"
-             animate="animate"
+             whileInView="animate"
+             viewport={{once: true}}
              stroke="#14CC26"
              strokeWidth="2"
              strokeLinecap="round"

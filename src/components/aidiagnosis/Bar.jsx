@@ -11,7 +11,8 @@ const Bar = ({width,height,x,y,label,labelY,fill}) => {
           <motion.rect
           variants={draw}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          viewport={{once: true}}
           stroke={fill}
           strokeWidth="2"
           strokeLinecap="round"

@@ -10,7 +10,11 @@ const Analytics = () => {
  const entries = Object.keys(docInfo.slice(0,1) && docInfo.slice(0,1)[0]?.data); 
  const [ xAxis , setXAxis ] = useState({x:40,x2:40,x3:100})
  const [ windowWidth , setWindowWidth ] = useState(window.innerWidth)
-
+ const [ svgAttri , setSvgAttri ] = useState({
+  height:160,
+  width: 530
+  });
+  const [ scale , setScale ] = useState('scale(0.68)');
  useEffect(() => {
     const handleResize = () => {
        setWindowWidth(window.innerWidth)
@@ -23,7 +27,6 @@ const Analytics = () => {
  }, [])
 
   useEffect(() => {
-
     if (windowWidth < 600) {
         setXAxis({
           x:40,
@@ -88,6 +91,10 @@ const Analytics = () => {
              <div className="flex flex-col h-auto lg:flex-row w-full gap-5">
               <PolyCont
                width="lg:w-[60%] md:w-full w-full"
+               svgAttri={svgAttri}
+               scale={scale}
+               top="lg:top-25"
+               setSvgAttri={setSvgAttri}
               />
                 <BarChart
                   width="lg:w-[45%] md:w-full w-full"

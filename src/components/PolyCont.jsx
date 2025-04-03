@@ -1,14 +1,9 @@
 import PolyLine from "./aidiagnosis/PolyLine"
 import ProgressItem from "./aidiagnosis/ProgressItem"
 import { useEffect, useState } from "react"
-const PolyCont = ({width}) => {
+const PolyCont = ({width,scale,svgAttri, top,setSvgAttri}) => {
 
-  const [ svgAttri , setSvgAttri ] = useState({
-    height:196,
-    width: 590
-  });
   const [ windowWidth , setWindowWidth ] = useState(window.innerWidth);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -87,6 +82,8 @@ const PolyCont = ({width}) => {
             svgAttri={svgAttri}
             draw={draw}
             windowWidth={windowWidth}
+            scale={scale}
+            top={top}
            />
             <ul className="ml-8 flex w-[90%] justify-between text-[10px]">
               <li>Jan 29</li>
