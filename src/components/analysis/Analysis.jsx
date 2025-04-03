@@ -7,6 +7,12 @@ import OpenAI from "openai";
 const Analysis = () => {
     const [ isShow , setIsShow ] = useState(false)
    
+    const variants = {
+        visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
+        hidden: {opacity: 0, scale: 0}
+    }
+
+    
     return(
         <div className="w-[95%] lg:w-[85%] grid gap-4 mx-auto">
             <h2 className="text-[24px] font-semibold">Image Analysis</h2>
@@ -15,6 +21,7 @@ const Analysis = () => {
                 <DetailsFlex
                 show={isShow}
                 setIsShow={setIsShow}
+                variants={variants}
                 />
             </div>
             

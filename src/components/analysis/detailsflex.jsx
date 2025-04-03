@@ -7,7 +7,7 @@ import DiagnosisBox from "../DiagnosisBox";
 import History from "../../components/analysis/History";
 import Button from "../Button";
 
-const DetailsFlex = ({show,setIsShow}) => {
+const DetailsFlex = ({show,setIsShow,variants}) => {
     const [selectedOption, setSelectedOptions] = useState();
     const {newItem , setIsNewItem , sliceInfo , setSliceInfo } = useContext(ShowContext)
     const [prevItem , setIsPrevItem] = useState(patientInfo.slice(9,10))
@@ -42,6 +42,7 @@ const DetailsFlex = ({show,setIsShow}) => {
             >
             <PdCont
              newItem={newItem ? newItem : prevItem}
+             variants={variants}
             />
             
             </DetailsBox>

@@ -1,6 +1,6 @@
 import PdBlock from "./pdblock";
 
-const PdCont = ({newItem}) => {
+const PdCont = ({newItem,variants}) => {
  
     const content =  
         newItem ? newItem.map(item => {
@@ -9,9 +9,15 @@ const PdCont = ({newItem}) => {
            return(
             newArray.map(([key,value],i) => {
                 return (<PdBlock
+                  key={key}
                   title={key}
                   content={value}
                   src={item.src[i]}
+                  variants={variants}
+                  transition={{
+                    duration: 0.3,
+                    delay: (i * 0.3),
+                  }}
                 />)
             })
            ) 
