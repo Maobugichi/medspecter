@@ -28,10 +28,10 @@ const Header = () => {
                      <span className="text-[#333333]">Overview</span></p>
                     </div>
                         
-                    <Form className="hidden lg:block w-[38%] h-10 relative">
+                    <form className="hidden lg:block w-[38%] h-10 relative">
                         <input className="border border-[#C4C4C4] w-full h-full rounded-lg" type="search" />
                         <SearchIcon/>
-                    </Form>
+                    </form>
                     <div className="w-[62%] lg:w-[30%]  flex justify-between">
                         <ThemeNoti/>
                         <Profile/>
