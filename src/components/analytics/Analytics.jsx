@@ -37,7 +37,7 @@ const Analytics = () => {
  const axis = [{ y:8,y2:11 , xLabel:120 } ,{ y:43, y2:48 , xLabel: 100 }, { y:80, y2:85 , xLabel:80 }, { y:118, y2:125 ,xLabel:60 }, { y:154 , y2:160, xLabel:40 } , { y:193, y2:198, xLabel:20 },{ y:237, y2:240 ,xLabel:0 }]
  const accuracyAxis = [{y2:25 , xLabel:"100%" } ,{ y2:65 , xLabel: "80%" }, { y2:105 , xLabel:"60%" }, { y2:145 ,xLabel:"40%" }, { y2:195, xLabel:"20%" } ]
     const barItem = docInfo.slice(0,1)[0]?.data[selectedOption && selectedOption].map((item,i) => {
-        const x = i === 0 ? 30 :  30 + (i * 73); 
+        const x = i === 0 ? 30 :  30 + (i * 66.3); 
         return(
             <Bar
               x={x}
@@ -45,7 +45,7 @@ const Analytics = () => {
               height={item.value}
               label={item.label}
               labelY={255}
-              labelX={10}
+              labelX={15}
               width={46.31}
               fill="#357AF6"
               setSelectedOptions={setSelectedOptions}
@@ -85,6 +85,10 @@ const Analytics = () => {
                   barItem={barItem}
                   head="Demographics"
                   axis={axis}
+                  x1={windowWidth < 600 ? 30 : 50}
+                  x2={windowWidth < 600 ? 355 : 650}
+                  x={windowWidth < 600 ? 5 : 5}
+                  svgHeight={260}
                 />
              </div>
 
@@ -102,6 +106,7 @@ const Analytics = () => {
                   height="h-[303px]"
                   head="AI Accuracy Overview"
                   axis={accuracyAxis}
+                  svgHeight={225}
                 />
              </div>
         </div>

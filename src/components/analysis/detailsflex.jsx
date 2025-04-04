@@ -38,7 +38,7 @@ const DetailsFlex = ({show,setIsShow,variants}) => {
              handleChange={handleChange}
              sliceInfo={sliceInfo}
              patientName={newItem ? newItem[0].name : sliceInfo[0].name}
-             className="h-[270px] lg:w-[96%] w-full"
+             className="h-[270px] lg:w-[96%] w-full flex flex-col"
             >
             <PdCont
              newItem={newItem ? newItem : prevItem}

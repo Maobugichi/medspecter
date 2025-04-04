@@ -8,14 +8,17 @@ import InfoFlex from "./InfoFlex";
 import Bar from "./Bar"
 import PolyCont from "../PolyCont"
 import DiagHead from "./DiagHead"
+import ConfidenceItem from "./ConfidenceItem"
+import AiItem from "./AiItem"
 
 const  AIdiag = () => {
+    const [ isShow , setIsShow ] = useState(false);
     const [ xAxis , setXAxis ] = useState({
-        x:100,
-        x2:100,
-        x3:100
+        x:63,
+        x2:75,
+        x3:130
     })
-    const [ scale , setScale ] = useState('scale(0.85)');
+    const [ scale , setScale ] = useState('scale(0.83)');
     const [ svgAttri , setSvgAttri ] = useState({
         height:196,
         width: 650
@@ -49,7 +52,7 @@ const  AIdiag = () => {
     },[windowWidth])
 
    
-    const { newItem , sliceInfo } = useContext(ShowContext)
+    const { newItem } = useContext(ShowContext)
     const streakCount = Object.entries(newItem[0].streakProgress)
     const streak = streakCount.map(([key,value]) => {
         return <Streak
@@ -57,6 +60,21 @@ const  AIdiag = () => {
                  days={value}
                 />
     })
+
+    const aiDiag = Array.from(Object.values(newItem[0].insight)).map(item => {
+        return(
+            <AiItem content={item}/>
+        )
+    })
+
+    const scores =  isShow ? 
+    newItem[0].confidenceScores.map(score => (
+      <ConfidenceItem date={score.date} diagnosis={score.diagnosis} percentage={score.rate}/>
+    )) 
+    : 
+    newItem[0].confidenceScores.slice(0, 2).map(score => (
+      <ConfidenceItem date={score.date} diagnosis={score.diagnosis} percentage={score.rate}/>
+    ));
     const [selectedOption, setSelectedOptions] = useState("weekly");
     const entries = Object.keys(newItem && newItem[0]?.data); 
     const axis = [{ y:10,y2:13 , xLabel:120 } ,{ y:55, y2:58 , xLabel: 100 }, { y:95, y2:98 , xLabel:80 }, { y:135, y2:140 ,xLabel:60 }, { y:180 , y2:185, xLabel:40 } , { y:220, y2:225, xLabel:20 },{ y:260, y2:265 ,xLabel:0 }]
@@ -79,12 +97,11 @@ const  AIdiag = () => {
         )
     })
 
-               
-    
+            
     return(
         <div className="h-auto flex flex-col min-h-[120vh] md:min-h-[100vh] lg:w-[85%] w-full md:w-[95%] md:mx-auto md:flex md:flex-col  lg:grid gap-8">
             <DiagHead/>
-            <div className="flex gap-10 xl:flex-row flex-col w-full ">
+            <div className="flex gap-5 xl:flex-row flex-col w-full ">
                 <div className=" xl:w-[85%]  w-[95%]  mx-auto h-auto flex flex-col lg:grid min-h-[80vh] md:min-h-[50vh] xl:min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">
                     <PolyCont
                      width="lg:w-full w-full mx-auto"
@@ -99,12 +116,18 @@ const  AIdiag = () => {
                     height="h-[383px]"
                     head="Progress Overtime"
                     axis={axis}
-                    windowWidth={windowWidth}
+                    x1={windowWidth < 600 ? 30 : 60}
+                    x2={windowWidth < 600 ? 355 : 650}
+                    x={windowWidth < 600 ? 5 : 23}
+                    svgHeight={285}
                     />
                 </div>
                 <InfoFlex
-                streak={streak}
-                warning={warning}
+                 streak={streak}
+                 scores={scores}
+                 warning={warning}
+                 setIsShow={setIsShow}
+                 aiDiag={aiDiag}
                 />
             </div>
            

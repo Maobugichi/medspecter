@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     const [thisInfo, setIsThisInfo] = useState(isInfo)
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
-    const [ count , setCount ] = useState(10) 
+    const [ count , setCount ] = useState(12) 
     const [width, setWidth] = useState(["w-[70px]" , "w-[110px]","w-[80px]","w-[90px]","w-[140px]" , "w-[100px]","w-[115px]","w-[100px]"]);
     const [contWidth, setContWidth] = useState(["w-[500px]" , "w-[90px]","w-[100px]","w-[90px]","w-[200px]" , "w-[120px]","w-[110px]","w-[90px]"]);
     useEffect(() => {
@@ -20,7 +20,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
 
     useEffect(() => {
         if (windowWidth < 600) { 
-            setCount(13)
+            setCount(15)
         }
     },[windowWidth]) 
     

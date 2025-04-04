@@ -274,6 +274,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -317,6 +319,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -358,6 +362,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -400,6 +406,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -440,6 +448,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -481,6 +491,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -522,6 +534,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -564,6 +578,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -605,6 +621,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -646,6 +664,8 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"
@@ -687,6 +707,9 @@ const patientInfo = [
     yearly: [{ value:125, label: "Pneumonia"}, { value:223, label: "Brain Tumor"},{ value:125, label:"Arthritis"},{ value:77.7, label:"Lung Nodules"},{ value:177, label:"Infections" }]   
    },
    streakProgress: {currentStreak: "7 days" , longestStreak: "15 days", lastMissedDay: "15 days"},
+   confidenceScores: [{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"},{date: "Jan 1 ,2025" , diagnosis: "Pneumonia" , rate: "81%"}],
+   
+   insight: {one: "Monitor test results to ensure continued progress." , two: "Reinforce the importance of consistent medication use.", three: "Encourage continued medication adherence for better detection accuracy."},
    history:[{
     date:"Dec 05,2024",
     treatment:"Chemotherapy Cycle 2"

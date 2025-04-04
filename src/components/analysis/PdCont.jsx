@@ -1,13 +1,15 @@
 import PdBlock from "./pdblock";
 
 const PdCont = ({newItem,variants}) => {
- 
     const content =  
         newItem ? newItem.map(item => {
             const newEntries = Array.from(Object.entries(item));
-            const newArray = newEntries.slice(3,4).concat(newEntries.slice(15));
+
+            const newArray = newEntries.slice(3,4).concat(newEntries.slice(17));
+           
            return(
             newArray.map(([key,value],i) => {
+                console.log(value)
                 return (<PdBlock
                   key={key}
                   title={key}
@@ -26,7 +28,7 @@ const PdCont = ({newItem,variants}) => {
         }) : null 
      
     return(
-        <div className="flex flex-wrap items-center  justify-center gap-5">
+        <div className="flex relative left-0 flex-wrap items-center  justify-center gap-5">
             {content}
         </div>
     )

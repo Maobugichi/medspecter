@@ -1,6 +1,7 @@
 import { motion } from "motion/react"
 
 const PdBlock = ({src,alt,age,title,content, variants,transition}) => {
+   
     return(
         <motion.div 
         variants={variants}
