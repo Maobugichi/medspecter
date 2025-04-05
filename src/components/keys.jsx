@@ -17,7 +17,7 @@ const Keys = ({info,check , count , setCount , width , contWidth}) => {
         key[0]?.slice(0,length).map((item,index) => {
           const widths = width[index]
           return(
-            <p ref={(el) => (paraRef.current[index] = el)}  className={`${widths} text-left text-xs md:text-[14px]`}> {item == "name" && "Patient"} {item}</p>
+            <p ref={(el) => (paraRef.current[index] = el)}  className={`${widths} text-left text-xs md:text-[14px] bg-red-200`}> {item == "name" && "Patient"} {item}</p>
           )
         })
       }
