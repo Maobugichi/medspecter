@@ -39,6 +39,7 @@ const DetailsFlex = ({show,setIsShow,variants}) => {
              sliceInfo={sliceInfo}
              patientName={newItem ? newItem[0].name : sliceInfo[0].name}
              className="h-[270px] lg:w-[96%] w-full flex flex-col"
+             headStyle="h-[50px] mt-3 text-[18px]"
             >
             <PdCont
              newItem={newItem ? newItem : prevItem}
@@ -49,6 +50,7 @@ const DetailsFlex = ({show,setIsShow,variants}) => {
             <DetailsBox
               info="Diagnosis"
               className="h-[270px] lg:w-[96%] w-full"
+              headStyle="h-[50px] mt-5 text-[18px]"
             >
             <DiagnosisBox
                 newItem={newItem ? newItem : prevItem}
@@ -58,6 +60,7 @@ const DetailsFlex = ({show,setIsShow,variants}) => {
              <DetailsBox
                info="Recent History"
                className="h-[270px] lg:w-[96%]  w-full"
+               headStyle="h-[50px] mt-5 text-[18px]"
              >
                 {history}
                 <Button

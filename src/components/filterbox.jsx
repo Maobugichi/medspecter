@@ -1,8 +1,9 @@
 import { motion ,AnimatePresence } from "motion/react";
 
-const FilterBox = ({isOpen,setIsOpen,setIsInfo,isInfo}) => {
+const FilterBox = ({isOpen,setIsOpen,setIsInfo,isInfo,extra}) => {
     let setInfo
     function handleFilter(e) {
+        
         if (e.target.innerText == "ascending") {
              setInfo = isInfo.sort((a,b)=> {
                 return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
@@ -29,7 +30,7 @@ const FilterBox = ({isOpen,setIsOpen,setIsInfo,isInfo}) => {
                         whileInView={{scale:1 , opacity:1}}
                         exit={{scale:0,opacity:0}}
                         transition={{type: "spring"}}
-                        className="h-32 cursor-pointer rounded-md border border-[#E4E4E4] border-solid shadow-md  bg-white  w-1/2 lg:w-[15%] grid place-content-center gap-4 absolute right-0 top-10">
+                        className={`h-32 cursor-pointer rounded-md border border-[#E4E4E4] border-solid shadow-md  bg-white  w-1/2 ${extra} grid place-content-center gap-4 absolute`}>
                         <li onClick={handleFilter}>ascending</li>
                         <li onClick={handleFilter}>descending</li>
                         <li onClick={handleFilter}>status</li>

@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { patientInfo } from "../../actions";
 import PendingCases from "../pendingcases";
 
-const PendingTable = ({variants}) => {
-    const [info, setInfo] = useState(patientInfo.slice(0,9))
+const PendingTable = ({variants, isInfo}) => {
+    const [info, setInfo] = useState(isInfo)
     const [windowWidth , setWindowWidth] = useState(window.innerWidth)
 
     useEffect(() => {

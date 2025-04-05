@@ -35,7 +35,7 @@ const Overview = () => {
         <div className="xl:w-[85%] h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10 ">
             <div className="xl:w-[65%] w-[95%]  h-1/2 flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
-                <div className="flex flex-col gap-16 xl:justify-between h-[85%]  limitedSize:h-[85%] ">
+                <div className="flex flex-col gap-14 xl:justify-between h-[85%]  limitedSize:h-[85%] ">
                  <WeekInfo
                   variants={variants}
                  />
@@ -54,7 +54,7 @@ const Overview = () => {
                 <DetailsBox
                  info="System Performance overview"
                  extra={true}
-                 className="h-[40%] md:h-[45%]"
+                 className="h-[40%] md:h-[45%] pb-4 rounded-lg"
                 >
                  <div className="flex flex-col items-center justify-center  h-[75%] ">
                     <img className="w-[65%] h-[65%]" src={guage} alt="" />

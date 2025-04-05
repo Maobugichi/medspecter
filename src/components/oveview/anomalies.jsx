@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const Anomalies = ({show,setIsShow ,variants}) => {
  
     return(
-        <motion.div  className=" lg:w-full w-[95%] mx-auto  gap-5 flex flex-col p-3 rounded-md border border-solid border-[#E8E8E8] h-auto min-h-[300px]">
+        <motion.div  className=" lg:w-full w-[95%] mx-auto  gap-5 flex flex-col p-3 rounded-lg border border-solid border-[#E8E8E8] h-auto min-h-[300px]">
           <AnomalyHead/>
           <AnomalyTable
            isShow={show}

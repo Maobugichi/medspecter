@@ -27,19 +27,22 @@ const PatientList = () => {
   
     return(
         
-        <div className="lg:grid limitedSize:flex  limitedSize:gap-10 h-full flex flex-col  gap-10 lg:gap-2 lg:w-[85%] w-[95%] mx-auto ">
+        <div className="lg:grid limitedSize:flex  limitedSize:gap-10 h-full flex flex-col  gap-10  lg:w-[85%] w-[95%] mx-auto ">
             <PatientHeader
              isOpen={isOpen}
              setIsOpen={setIsOpen}
              isInfo={isInfo}
              setIsInfo={setIsInfo}
             />
-            <PageCount/>
-            <PatientTable
-              isInfo={isInfo}
-              setIsInfo={setIsInfo}
-              variants={variants}
-            />
+             <div className="grid gap-10">
+               <PageCount/>
+                <PatientTable
+                isInfo={isInfo}
+                setIsInfo={setIsInfo}
+                variants={variants}
+                />
+             </div>
+            
         </div>
     )
 }

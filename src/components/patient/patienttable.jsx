@@ -16,7 +16,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
         return () => {
             window.removeEventListener('resize',handleResize)
         }
-    },[])
+    },[window.innerWidth])
 
     useEffect(() => {
         if (windowWidth < 600) { 
@@ -43,7 +43,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
               width={widths}
               variants={variants}
               transition={{
-                duration: 0.2,
+                duration: 0.5,
                 delay: (i * 0.2),
               }}
               spacing="md:gap-5 gap-2.5 smallSize:gap-2 h-16"
@@ -53,7 +53,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     
 
     return(
-        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto  h-[150vh] rounded-lg">
+        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto  h-[150vh] rounded-xl">
             <Keys
              info={isInfo}
              check={true}
