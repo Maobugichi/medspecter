@@ -5,7 +5,7 @@ import { patientInfo } from "../../actions"
 import { useState } from "react"
 const Pending = ({variants}) => {
     const [ count , setCount ] = useState(4) 
-    const [width, setWidth] = useState(["w-[130px]" , "w-[110px]","w-[110px]","w-[90px]"]);
+    const [width, setWidth] = useState(["lg:w-[130px] w-[22%]" , "lg:w-[110px] w-[23%]","lg:w-[110px] w-[28%]","lg:w-[90px] w-[70px]"]);
     const [isInfo,setIsInfo] = useState(patientInfo.slice(0,9))
     const [isOpen, setIsOpen] = useState(false);
     return(

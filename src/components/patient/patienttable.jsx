@@ -5,7 +5,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     const [thisInfo, setIsThisInfo] = useState(isInfo)
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
     const [ count , setCount ] = useState(12) 
-    const [width, setWidth] = useState(["w-[70px]" , "w-[110px]","w-[80px]","w-[90px]","w-[140px]" , "w-[100px]","w-[115px]","w-[100px]"]);
+    const [width, setWidth] = useState(["lg:w-[70px] w-[8%]" , "lg:w-[110px] w-[20%]","lg:w-[80px] w-[15%]","lg:w-[90px] w-[19%]","lg:w-[140px]" , "w-[100px]","w-[115px]","w-[100px]"]);
     const [contWidth, setContWidth] = useState(["w-[500px]" , "w-[90px]","w-[100px]","w-[90px]","w-[200px]" , "w-[120px]","w-[110px]","w-[90px]"]);
     useEffect(() => {
         const handleResize = () => {
@@ -16,7 +16,8 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
         return () => {
             window.removeEventListener('resize',handleResize)
         }
-    },[window.innerWidth])
+    },[])
+
 
     useEffect(() => {
         if (windowWidth < 600) { 
@@ -53,7 +54,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     
 
     return(
-        <div className="w-full border border-solid border-[#E8E8E8]  limitedSize:h-[75%] mx-auto  h-[150vh] rounded-xl">
+        <div className="w-[98%]  lg:w-full mx-auto border border-solid border-[#E8E8E8] limitedSize:h-[75%]   h-[150vh] rounded-xl">
             <Keys
              info={isInfo}
              check={true}
@@ -62,7 +63,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
              width={width}
              contWidth="w-[95%]"
             />
-            <div className="grid w-full  overflow-hidden h-[90%] gap-2">
+            <div className="grid w-full   overflow-hidden h-[90%] gap-2">
               {tableList}
             </div>
             

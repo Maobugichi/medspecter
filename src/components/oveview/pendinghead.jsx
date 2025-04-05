@@ -6,7 +6,7 @@ const PendingHead = ({isInfo ,isOpen , setIsInfo , setIsOpen}) => {
        
     }
     return(
-        <div className="flex justify-between w-full  h-15 pt-3  relative">
+        <div className="flex justify-between w-full  h-15 pt-3 relative">
             <h2 className="md:text-[16px] text-[0.8rem]">
                 Pending Cases
             </h2>

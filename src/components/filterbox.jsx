@@ -3,7 +3,6 @@ import { motion ,AnimatePresence } from "motion/react";
 const FilterBox = ({isOpen,setIsOpen,setIsInfo,isInfo,extra}) => {
     let setInfo
     function handleFilter(e) {
-        
         if (e.target.innerText == "ascending") {
              setInfo = isInfo.sort((a,b)=> {
                 return a.name.toLowerCase().localeCompare(b.name.toLowerCase())

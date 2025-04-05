@@ -10,7 +10,7 @@ const PatientHeader = ({isOpen,setIsOpen,isInfo,setIsInfo}) => {
     }
     return(
         <div className="flex justify-between relative  w-full mx-auto ">
-            <h2 className="text-[29px] font-semibold">
+            <h2 className="text-[20px] lg:text-[29px] font-semibold">
                 Patient List
             </h2>
             <div className="flex gap-2 md:gap-4">

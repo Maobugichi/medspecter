@@ -3,6 +3,7 @@ import { patientInfo } from "../../actions";
 import PendingCases from "../pendingcases";
 
 const PendingTable = ({variants, isInfo}) => {
+
     const [info, setInfo] = useState(isInfo)
     const [windowWidth , setWindowWidth] = useState(window.innerWidth)
 
@@ -18,11 +19,9 @@ const PendingTable = ({variants, isInfo}) => {
        
     },[])
 
-    useEffect(() => {
-        if (windowWidth < 600) {
-            setInfo(patientInfo.slice(0,9))
-        }
-    },[windowWidth])
+   
+
+
     const tableItems = info.map((patient, i) => (
         <PendingCases
          key={patient.id}
