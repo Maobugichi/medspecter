@@ -5,10 +5,10 @@ import { useContext } from "react";
 import { ShowContext } from "../components/ContextProvider";
 
 const Root = () => {
-  const { theme } = useContext(ShowContext)
+  const { theme } = useContext(ShowContext);
     return(
       
-        <div className={`${!theme ? "bg-[#060606]" : "bg-white"} w-full flex flex-col gap-10 h-auto pb-8   overflow-x-hidden font-sans`}>
+        <div className={`${!theme ? "bg-[#060606]" : "bg-white"} w-full flex flex-col gap-10 h-auto pb-8 transition-colors duration-300  overflow-x-hidden font-sans`}>
           <Header/>
           <div className="flex w-full  h-auto ">
            <SideNav/>

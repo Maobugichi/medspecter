@@ -101,7 +101,7 @@ const SideNav = () => {
         animate={isResize && {x:showNav  ?isX.x : isX.xAu}}
         className={`lg:left-0 ${!theme ? "bg-[#060606] text-white" : "bg-white"} lg:w-[18%] w-[50%] flex flex-col justify-between fixed top-0 z-20 lg:relative h-auto min-h-[100vh] transition-colors duration-300`}>
           
-            <div className=" grid gap-10 mt-10">
+            <div className=" grid gap-8 mt-5">
                <svg  onClick={handleNav} className="ml-40 lg:hidden" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="none" stroke={!theme ? "#ffffff" : "#2e2a2a"} strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.247 6.74c.826.827 1.24 1.24 1.753 1.24c.514 0 .927-.413 1.753-1.24h0l1.754-1.753h0c.407-.408.611-.612.823-.734c1.066-.616 1.945-.005 2.683.734c.739.738 1.35 1.617.734 2.683c-.122.212-.326.416-.734.823l-1.753 1.754c-.827.826-1.24 1.24-1.24 1.753c0 .514.413.927 1.24 1.753l1.753 1.754c.408.407.612.611.734.823c.616 1.066.005 1.945-.734 2.683c-.738.739-1.617 1.35-2.683.734c-.212-.122-.416-.326-.823-.734l-1.754-1.753h0c-.826-.826-1.24-1.24-1.753-1.24c-.514 0-.927.414-1.753 1.24h0l-1.754 1.753c-.407.408-.611.612-.823.734c-1.066.616-1.945.005-2.683-.734c-.739-.738-1.35-1.617-.734-2.683c.122-.212.326-.416.734-.823l1.753-1.754c.827-.826 1.24-1.24 1.24-1.753c0-.514-.414-.927-1.24-1.753L4.987 8.493c-.408-.407-.612-.611-.734-.823c-.616-1.066-.005-1.945.734-2.683c.738-.739 1.617-1.35 2.683-.734c.212.122.416.326.823.734h0z" color="#2e2a2a"></path></svg>
                <div className="lg:hidden">
                  <Profile/>
@@ -112,15 +112,13 @@ const SideNav = () => {
                 </ul>
                 <div className="lg:hidden">
                     <ThemeNoti
-                    theme={theme}
-                    setTheme={setTheme}
+                     theme={theme}
+                     setTheme={setTheme}
                     />
                 </div>
                 
             </div>
-           
-
-            <ul className="h-30 mb-8 grid ">
+            <ul className="h-30 mb-8 flex flex-col gap-3">
                 {extra}
             </ul>
         </motion.nav>

@@ -6,15 +6,14 @@ import SearchIcon from "./searchicon";
 import { ShowContext } from "../ContextProvider";
 import { useContext, useEffect } from "react";
 const Header = () => {
-    const { setShowNav , theme } = useContext(ShowContext);
+    const { setShowNav , theme ,setTheme } = useContext(ShowContext);
    
     function handleNav() {
         setShowNav(prev => !prev)
     }
-
-   
+    
     return(
-        <header className="w-full h-20 grid border-b border-solid border-[#E8E8E8]">
+        <header className={`w-full h-20 grid border-b border-solid border-[#E8E8E8] ${!theme ? "text-white" : "text-[#060606]"}`}>
             <nav className="flex  items-center lg:w-full w-[90%] mx-auto justify-between  h-full">
                 <div className="lg:w-[20%] w-[40%] ">
                     <img src={logo} alt="med spectre logo" />
@@ -33,7 +32,10 @@ const Header = () => {
                         <SearchIcon/>
                     </form>
                     <div className="w-[62%] lg:w-[30%]  flex justify-between">
-                        <ThemeNoti/>
+                        <ThemeNoti
+                         theme={theme}
+                         setTheme={setTheme}
+                        />
                         <Profile/>
                     </div>
                 </div>
