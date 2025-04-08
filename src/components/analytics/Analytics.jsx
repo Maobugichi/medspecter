@@ -2,9 +2,10 @@ import AnalyticsBlock from "./AnalyticsBlock";
 import PieCont from "./PieCont";
 import BarChart from "../BarChart";
 import { docInfo } from "../../actions";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Bar from "../aidiagnosis/Bar";
 import PolyCont from "../PolyCont";
+import { ShowContext } from "../ContextProvider";
 const Analytics = () => {
  const [selectedOption, setSelectedOptions] = useState("weekly");
  const entries = Object.keys(docInfo.slice(0,1) && docInfo.slice(0,1)[0]?.data); 
@@ -14,7 +15,8 @@ const Analytics = () => {
   height:160,
   width: 530
   });
-  const [ scale , setScale ] = useState('scale(0.68)');
+ const [ scale , setScale ] = useState('scale(0.68)');
+ const { theme } = useContext(ShowContext)
  useEffect(() => {
     const handleResize = () => {
        setWindowWidth(window.innerWidth)
@@ -72,13 +74,15 @@ const Analytics = () => {
         )
     })
     return(
-        <div className="lg:w-[85%] mx-auto w-[95%] flex flex-col h-auto gap-5 ">
+        <div className={`lg:w-[85%] mx-auto w-[95%] flex flex-col h-auto gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
           <h2 className="text-[24px] font-semibold w-[95%] mx-auto">Analytics</h2>
             <AnalyticsBlock
              docinfo={docInfo}
             />
              <div className="flex h-auto lg:flex-row flex-col lg:justify-between gap-5">
-                <PieCont/>
+                <PieCont
+                 theme={theme}
+                />
                 <BarChart
                   width="lg:w-[65%] "
                   height="h-[340px]"

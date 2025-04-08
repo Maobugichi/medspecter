@@ -17,14 +17,14 @@ const  AIdiag = () => {
         x:63,
         x2:75,
         x3:130
-    })
+    });
     const [ scale , setScale ] = useState('scale(0.83)');
     const [ svgAttri , setSvgAttri ] = useState({
         height:196,
         width: 650
-      });
-    const [ windowWidth , setWindowWidth ] = useState(window.innerWidth)
-
+    });
+    const [ windowWidth , setWindowWidth ] = useState(window.innerWidth);
+    const { theme } = useContext(ShowContext)
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
@@ -99,7 +99,7 @@ const  AIdiag = () => {
 
             
     return(
-        <div className="h-auto flex flex-col min-h-[120vh] md:min-h-[100vh] lg:w-[85%] w-full md:w-[95%] md:mx-auto md:flex md:flex-col  lg:grid gap-8">
+        <div className={`h-auto flex flex-col min-h-[120vh] md:min-h-[100vh] lg:w-[85%] w-full md:w-[95%] md:mx-auto md:flex md:flex-col  lg:grid gap-8 ${!theme ? "text-white" : "text-[#060606]"}`}>
             <DiagHead/>
             <div className="flex gap-5 xl:flex-row flex-col w-full ">
                 <div className=" xl:w-[85%]  w-[95%]  mx-auto h-auto flex flex-col lg:grid min-h-[80vh] md:min-h-[50vh] xl:min-h-[90vh] limitedSize:flex limitedSize:flex-col limitedSize:gap-10 gap-10">
@@ -128,6 +128,7 @@ const  AIdiag = () => {
                  warning={warning}
                  setIsShow={setIsShow}
                  aiDiag={aiDiag}
+                 theme={theme}
                 />
             </div>
            

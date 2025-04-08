@@ -1,5 +1,6 @@
 import { motion } from "motion/react"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { ShowContext } from "../ContextProvider";
 
 const AnomalyPatients = ({id,name,d,content, variants}) => {
     const [ fontSize , setFontSize ] = useState('12px');
@@ -27,7 +28,7 @@ const AnomalyPatients = ({id,name,d,content, variants}) => {
         ease: [0, 0.71, 0.2, 1.01],
         type:"tween"
     }
-
+    const { theme } = useContext(ShowContext);
     return(
         <motion.div
          initial={{height: 0 , fontSize: 0 , borderBottom: "none"}}
@@ -42,9 +43,8 @@ const AnomalyPatients = ({id,name,d,content, variants}) => {
                  viewport={{once:true}}
                  transition={{times: [0, 0.3, 1],  delay:0.8}}
                  className="bg-[#FC485A] h-[10px] w-[10px] rounded-full">
-
                 </motion.span>
-                <p className="text-[#333333]">{id} - {name}</p>
+                <p className={`${!theme ? "text-white" : "text-[#333333]"} `}>{id} - {name}</p>
             </div>
             <motion.div 
              variants={variants}
@@ -53,8 +53,8 @@ const AnomalyPatients = ({id,name,d,content, variants}) => {
              viewport={{once:true}}
              transition={{times: [0, 0.3, 1],  delay:0.8}}
              className="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width={20} height={15} viewBox="0 0 256 256"><path fill="#2e2a2a" d={d}></path></svg>
-              <p className="text-[#00000066]">{content}</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width={20} height={15} viewBox="0 0 256 256"><path fill={!theme ? "white" : "#2e2a2a"} d={d}></path></svg>
+              <p className={`${!theme ? "text-white" : "text-[#00000066]"}`}>{content}</p>
               <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24"><path fill="none" stroke="#2e2a2a" strokeLinecap="round" d="m9.929 4.858l6.364 6.364a1 1 0 0 1 0 1.414L9.929 19" strokeWidth={1}></path></svg>
             </motion.div>
         </motion.div>

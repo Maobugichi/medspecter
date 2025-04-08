@@ -3,10 +3,11 @@ import { patientInfo } from "./../actions";
 const ShowContext = createContext("TRUE")
 
 const ContextProvider = ({children}) => {
-    const [newItem , setIsNewItem] = useState(patientInfo.slice(9,10))
+    const [newItem , setIsNewItem] = useState(patientInfo.slice(9,10));
     const [sliceInfo, setSliceInfo] = useState(patientInfo.slice(9));
-    const [isShow, setIsShow] = useState(false)
-    const [ showNav , setShowNav ] = useState(false)
+    const [isShow, setIsShow] = useState(false);
+    const [ showNav , setShowNav ] = useState(false);
+    const [ theme , setTheme ] = useState(true)
     const contextValue = useMemo(() => {
         return {
             newItem,
@@ -16,9 +17,11 @@ const ContextProvider = ({children}) => {
             isShow,
             setIsShow,
             showNav,
-            setShowNav
+            setShowNav,
+            theme,
+            setTheme
         }
-    },[newItem,sliceInfo, isShow , showNav])
+    },[newItem,sliceInfo, isShow , showNav , theme , setTheme])
    
     return(
         <ShowContext.Provider value={contextValue}>

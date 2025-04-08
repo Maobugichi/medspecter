@@ -1,7 +1,29 @@
 import dots from "../../assets/dots.svg";
+import ChartInfo from "./ChartInfo";
 import PieChart from "./PieChart";
 
-const PieCont = () => {
+const PieCont = ({ theme }) => {
+
+  const chartInfoArray = [
+    {
+      text:"Tumors",
+      bg:"bg-[#3371EB]"
+    }, {
+      text:"Fractures",
+      bg:"bg-[#FF8E26]"
+    } ,
+    {
+      text:"Infections",
+      bg:"bg-[#14CC26]"
+    }
+  ]
+
+  const chartInfo = chartInfoArray.map(info => (
+    <ChartInfo
+     content={info.text}
+     bg={info.bg}
+    />
+  )) 
     return(
         <div className="@container h-[340px] lg:w-[347px] border border-[#E8E8E8] border-solid grid rounded-lg">
           <div className="flex items-center justify-between w-[90%]  h-10 mx-auto ">
@@ -10,11 +32,11 @@ const PieCont = () => {
                 <img src={dots} alt="three vertical dots" />
             </div>
           </div>
-          <PieChart/>
+          <PieChart
+           theme={theme}
+          />
           <div className="flex text-[12px] w-[70%] mx-auto justify-between">
-            <p>Tumors</p>
-            <p>Fractures</p>
-            <p>Infections</p>
+            {chartInfo}
           </div>
     </div>
     )

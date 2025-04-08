@@ -1,8 +1,8 @@
 import NextBtn from "./nxtbtn"
 
-const PageCount = ({count}) => {
+const PageCount = ({count,theme}) => {
     return(
-        <div className="flex text-[14px] text-[#8D8D8D] items-center">
+        <div className={`flex text-[14px] ${!theme ? "text-white" : "text-[#8D8D8D]"} items-center`}>
             <p>100,000</p>
             <div className="flex">
                <NextBtn

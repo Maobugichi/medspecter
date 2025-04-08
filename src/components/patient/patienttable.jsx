@@ -54,7 +54,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     
 
     return(
-        <div className="w-[98%]  lg:w-full mx-auto border border-solid border-[#E8E8E8] limitedSize:h-[75%]   h-[150vh] rounded-xl">
+        <div className="w-[98%]  lg:w-full mx-auto border border-solid border-[#E8E8E8] limitedSize:h-[75%]   h-[110vh] rounded-xl">
             <Keys
              info={isInfo}
              check={true}

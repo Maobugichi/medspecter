@@ -70,8 +70,8 @@ const PolyCont = ({width,scale,svgAttri, top,setSvgAttri}) => {
              </div>
           </div>
 
-          <div className=" w-[95%] h-[90%] grid gap-5">
-            <ul className="grid gap-5 text-[10px]">
+          <div className=" w-[95%] h-[90%] grid gap-5 text-[#9c9ca0]">
+            <ul className="grid gap-5 text-[10px] ">
               <li>100</li>
               <li>80</li>
               <li>60</li>

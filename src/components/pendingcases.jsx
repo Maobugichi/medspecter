@@ -1,14 +1,17 @@
 import { motion } from "motion/react"
+import { useContext } from "react"
+import { ShowContext } from "./ContextProvider"
 
 const PendingCases = ({id,name,diagnosis,date,status,bgColor,statusColor,statusText,doctor,number,treatment,width , spacing , variants , transition}) => {
+
+    const { theme } = useContext(ShowContext)
     return(
         <motion.div 
         variants={variants}
         initial="hidden"
         animate="visible"
-       
         transition={transition}
-        className={`${bgColor} flex  text-[10px]  lg:text-[14px] w-full  text-[#000000] ${spacing} items-center p-2`}>
+        className={`${bgColor} flex  text-[10px]  lg:text-[14px] w-full ${!theme ? "text-white" : "text-[#000000]/50"}  ${spacing} items-center p-2`}>
             {id && <input className="w-2 md:w-10" type="checkbox" />}
             {id &&  <p className={`w-auto lg:min-w-[60px] flex  items-start `}>{id}</p>}
              <p className={` md:w-auto md:min-w-[120px]  whitespace-wrap flex items-start break-word w-[60px] `}>{name}</p>    

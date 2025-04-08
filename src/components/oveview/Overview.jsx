@@ -11,7 +11,7 @@ import pulse from "../../assets/pulse.svg";
 const Overview = () => {
     const [greet,setGreet] = useState("")
     const [isShow,setIsShow] = useState(false)
-    
+    const { theme } = useContext(ShowContext)
     useEffect(() => {
         const date = new Date
         const hour = date.getHours();
@@ -32,7 +32,7 @@ const Overview = () => {
 
   
     return(
-        <div className="xl:w-[85%] h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10 ">
+        <div className={`xl:w-[85%] h-full  flex flex-col xl:flex-row gap-5 w-full md:pb-10 ${!theme ? "text-white" : "text-[]"} `}>
             <div className="xl:w-[65%] w-[95%]  h-1/2 flex flex-col mx-auto gap-5">
                 <h1 className="text-[24px] font-semibold">{greet} name</h1>
                 <div className="flex flex-col gap-14 xl:justify-between h-[85%]  limitedSize:h-[85%] ">

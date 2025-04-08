@@ -10,10 +10,9 @@ const Analysis = () => {
         visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
         hidden: {opacity: 0, scale: 0}
     }
-
-    
+    const { theme } = useContext(ShowContext)
     return(
-        <div className="w-[95%] lg:w-[85%] grid gap-4 mx-auto">
+        <div className={`w-[95%] lg:w-[85%] grid gap-4 mx-auto ${!theme ?  "text-white" : "text-[#060606]"}`}>
             <h2 className="text-[24px] font-semibold">Image Analysis</h2>
             <div className="flex xl:flex-row flex-col w-full mx-auto gap-5">
               <ImageAnalysis/>

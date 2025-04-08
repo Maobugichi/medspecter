@@ -1,8 +1,9 @@
 import PageCount from "./pagecount";
 import PatientHeader from "./patientheader";
 import PatientTable from "./patienttable";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { patientInfo } from "../../actions";
+import { ShowContext } from "../ContextProvider";
 const PatientList = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isInfo,setIsInfo] = useState(patientInfo.slice(9))
@@ -23,23 +24,27 @@ const PatientList = () => {
         visible: {opacity: [0 , 0.5 , 1] , scale : [0 , 0.5 , 1] },
         hidden: {opacity: 0, scale: 0}
     }
+    const { theme } = useContext(ShowContext);
 
-  
     return(
         
-        <div className="lg:grid limitedSize:flex  limitedSize:gap-10 h-full flex flex-col  gap-10  overflow-hidden  lg:w-[85%] w-[97%] mx-auto ">
+        <div className={`${!theme ? "text-white" : "text-[#000000]" } lg:grid limitedSize:flex  limitedSize:gap-10 h-full flex flex-col  gap-10  overflow-hidden  lg:w-[85%] w-[97%] mx-auto `}>
             <PatientHeader
              isOpen={isOpen}
              setIsOpen={setIsOpen}
              isInfo={isInfo}
              setIsInfo={setIsInfo}
+             theme={theme}
             />
              <div className="flex flex-col gap-10">
-               <PageCount/>
+               <PageCount
+                theme={theme}
+               />
                 <PatientTable
                 isInfo={isInfo}
                 setIsInfo={setIsInfo}
                 variants={variants}
+                theme={theme}
                 />
              </div>
             
