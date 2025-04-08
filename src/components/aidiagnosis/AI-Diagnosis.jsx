@@ -111,15 +111,16 @@ const  AIdiag = () => {
                      setSvgAttri={setSvgAttri}
                     />
                     <BarChart
-                    barItem={barItem}
-                    width="lg:w-[97%] w-full md:w-full mx-auto"
-                    height="h-[383px]"
-                    head="Progress Overtime"
-                    axis={axis}
-                    x1={windowWidth < 600 ? 30 : 60}
-                    x2={windowWidth < 600 ? 355 : 650}
-                    x={windowWidth < 600 ? 5 : 23}
-                    svgHeight={285}
+                     barItem={barItem}
+                     width="lg:w-[97%] w-full md:w-full mx-auto"
+                     height="h-[383px]"
+                     head="Progress Overtime"
+                     axis={axis}
+                     x1={windowWidth < 600 ? 30 : 60}
+                     x2={windowWidth < 600 ? 355 : 650}
+                     x={windowWidth < 600 ? 5 : 23}
+                     svgHeight={285}
+                     svgWidth={700}
                     />
                 </div>
                 <InfoFlex

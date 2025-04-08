@@ -1,6 +1,6 @@
 import BarHeader from "./aidiagnosis/BarChartHeader";
 import Lines from "./Lines";
-const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,height,head,axis,x1, x2,x, svgHeight}) => {
+const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,height,head,axis,x1, x2,x, svgHeight , svgWidth , container="w-full overflow-hidden"}) => {
     function handleChange(e) {
         setSelectedOptions(e.target.value)
         const myItem = sliceInfo.filter(item => item.name.toLowerCase() == e.target.value.toLowerCase())
@@ -16,20 +16,21 @@ const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,heigh
              head={head}
             />
            
-            <svg  
-            style={{ transform:  'scale(0.93)'}} 
-            height={svgHeight} 
-            className="w-full" 
-            overflow="auto"
-                >
-                <Lines
-                    axis={axis}
-                    x1={x1}
-                    x2={x2}
-                    x={x}
-                />
-                {barItem}   
-            </svg>
+           <div className={`${container}`}>
+                <svg  
+                style={{ transform:  'scale(0.93)'}} 
+                height={svgHeight} 
+                width={svgWidth}  
+                    >
+                    <Lines
+                        axis={axis}
+                        x1={x1}
+                        x2={x2}
+                        x={x}
+                    />
+                    {barItem}   
+                </svg>
+            </div> 
     </div>
     )
 }

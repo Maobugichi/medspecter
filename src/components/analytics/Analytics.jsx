@@ -90,9 +90,11 @@ const Analytics = () => {
                   head="Demographics"
                   axis={axis}
                   x1={windowWidth < 600 ? 30 : 50}
-                  x2={windowWidth < 600 ? 355 : 650}
-                  x={windowWidth < 600 ? 5 : 5}
+                  x2={windowWidth < 600 ? 755 : 650}
+                  x={windowWidth < 600 ? 0 : 5}
                   svgHeight={260}
+                  svgWidth={690}
+                  container="w-full lg:w-full overflow-auto lg:overflow-hidden "
                 />
              </div>
 
@@ -111,6 +113,7 @@ const Analytics = () => {
                   head="AI Accuracy Overview"
                   axis={accuracyAxis}
                   svgHeight={225}
+                  svgWidth={windowWidth < 600 ? 360 : 430}
                 />
              </div>
         </div>
