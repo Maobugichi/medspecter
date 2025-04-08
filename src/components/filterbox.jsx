@@ -26,9 +26,9 @@ const FilterBox = ({isOpen,setIsOpen,setIsInfo,isInfo,extra,theme}) => {
             {
                 isOpen &&<motion.ul 
                         initial={{scale:0, opacity:0}}
-                        whileInView={{scale:[0 , 0.5 , 1] , opacity:[0 , 0.5 , 1]}}
+                        whileInView={{scale:[0 , 0.5 , 1] , opacity:[0 ,0.5, 1]}}
                         exit={{scale:[1 , 0.5 , 0],opacity:[1 , 0.5 , 0]}}
-                        transition={{ times: [0 , 0.2 , 1] }}
+                        transition={{ times: [0 , 0.5 , 1] }}
                         className={`h-32 cursor-pointer rounded-md border border-[#E4E4E4] border-solid shadow-md  ${!theme ? "bg-[#060606]" : "bg-white"}  w-1/2 ${extra} grid place-content-center gap-4 absolute`}>
                         <li onClick={handleFilter}>ascending</li>
                         <li onClick={handleFilter}>descending</li>

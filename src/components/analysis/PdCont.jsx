@@ -9,8 +9,9 @@ const PdCont = ({newItem,variants}) => {
            
            return(
             newArray.map(([key,value],i) => {
-                console.log(value)
-                return (<PdBlock
+               
+                return (
+                <PdBlock
                   key={key}
                   title={key}
                   content={value}

@@ -3,7 +3,7 @@ import PendingHead from "./pendinghead"
 import PendingTable from "./pendingtable"
 import { patientInfo } from "../../actions"
 import { useState } from "react"
-const Pending = ({variants}) => {
+const Pending = ({variants,theme}) => {
     const [ count , setCount ] = useState(4) 
     const [width, setWidth] = useState(["lg:w-[130px] w-[22%]" , "lg:w-[110px] w-[23%]","lg:w-[110px] w-[28%]","lg:w-[90px] w-[70px]"]);
     const [isInfo,setIsInfo] = useState(patientInfo.slice(0,9))
@@ -14,6 +14,7 @@ const Pending = ({variants}) => {
              isInfo={isInfo}
              setIsInfo={setIsInfo}
              isOpen={isOpen}
+             theme={theme}
              setIsOpen={setIsOpen}
             />
             <Keys

@@ -120,7 +120,7 @@ const SideNav = () => {
             </div>
            
 
-            <ul className="h-30 grid ">
+            <ul className="h-30 mb-8 grid ">
                 {extra}
             </ul>
         </motion.nav>

@@ -1,6 +1,6 @@
 import Blockcont from "./blockcont"
 import FilterBox from "../filterbox"
-const PendingHead = ({isInfo ,isOpen , setIsInfo , setIsOpen}) => {
+const PendingHead = ({isInfo ,isOpen , setIsInfo , setIsOpen , theme}) => {
     function handleClick() {
         setIsOpen(prev => !prev)
        
@@ -20,6 +20,7 @@ const PendingHead = ({isInfo ,isOpen , setIsInfo , setIsOpen}) => {
              isInfo={isInfo}
              setIsInfo={setIsInfo}
              extra="lg:w-[25%]  right-39 top-17"
+             theme={theme}
             />
         </div>
     )

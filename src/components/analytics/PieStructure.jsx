@@ -6,7 +6,7 @@ const PieStructure = ({d,draw,stroke,fill}) => {
          <motion.path 
          variants={draw}
          initial="initial"
-         whileInView="animate"
+         animate="animate"
          viewport={{once: true}}
          d={d}
          fill={fill}

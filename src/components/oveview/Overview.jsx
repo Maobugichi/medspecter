@@ -41,6 +41,7 @@ const Overview = () => {
                  />
                  <Pending
                   variants={variants}
+                  theme={theme}
                  />
                 </div>
                 
@@ -50,10 +51,12 @@ const Overview = () => {
                  show={isShow}
                  setIsShow={setIsShow}
                  variants={variants}
+                 theme={theme}
                 />
                 <DetailsBox
                  info="System Performance overview"
                  extra={true}
+                 theme={theme}
                  className="h-[40%] md:h-[45%] pb-4 rounded-lg"
                 >
                  <div className="flex flex-col items-center justify-center  h-[75%] ">
