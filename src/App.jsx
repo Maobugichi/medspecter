@@ -13,6 +13,7 @@ import AIdiag from "./components/aidiagnosis/AI-Diagnosis";
 import Analytics from "./components/analytics/Analytics";
 import { ContextProvider } from "./components/ContextProvider";
 import { Navigate } from 'react-router-dom';
+import ScrollToTop from './components/scrolltotop';
 
 
 function App() {
@@ -20,19 +21,19 @@ function App() {
 
   return (
     <HashRouter>
-    <ContextProvider>
-      <Routes>
-          <Route path="/" element={<Root />}>
-           <Route index element={<Navigate to="overviews/1" />} />
-
-            <Route path="overviews/:overviewId" element={<Overview />} />
-            <Route path="patientlists/:patientlistId" element={<PatientList />} />
-            <Route path="analysis/:analysisId" element={<Analysis />} />
-            <Route path="aidiagnosis/:aidiagnosisId" element={<AIdiag />} />
-            <Route path="analytics/:analyticsId" element={<Analytics />} />
-          </Route>
-      </Routes>
-    </ContextProvider>
+      <ScrollToTop/>
+      <ContextProvider>
+        <Routes>
+            <Route path="/" element={<Root />}>
+            <Route index element={<Navigate to="overviews/1" />} />
+              <Route path="overviews/:overviewId" element={<Overview />} />
+              <Route path="patientlists/:patientlistId" element={<PatientList />} />
+              <Route path="analysis/:analysisId" element={<Analysis />} />
+              <Route path="aidiagnosis/:aidiagnosisId" element={<AIdiag />} />
+              <Route path="analytics/:analyticsId" element={<Analytics />} />
+            </Route>
+        </Routes>
+      </ContextProvider>
   </HashRouter>
   )
 }

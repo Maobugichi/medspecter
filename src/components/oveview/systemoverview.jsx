@@ -13,7 +13,7 @@ const SystemOverview = ({ theme }) => {
         className="h-[40%]  md:h-[45%] xl:h-[41.5%]  grid p-4 rounded-lg "
        >
            <img className="w-[70%] h-[70%] mx-auto" src={guage} alt="guage" />
-           <div className="text-[12px] w-[80%] flex gap-2 flex-wrap  mx-auto justify-center h-12 pb-4 ">
+           <div className="text-[12px] w-[90%] bg-yellow-50 flex gap-2 flex-wrap  mx-auto justify-center h-12 pb-4 ">
               
                 <div className="flex gap-2">
                    <img src={clock} alt="clock" />

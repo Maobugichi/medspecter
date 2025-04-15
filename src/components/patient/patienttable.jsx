@@ -5,7 +5,7 @@ const PatientTable = ({isInfo,setIsInfo ,variants}) => {
     const [thisInfo, setIsThisInfo] = useState(isInfo)
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
     const [ count , setCount ] = useState(12) 
-    const [width, setWidth] = useState(["w-[10%] lg:w-[70px] " , "w-[16%] lg:w-[110px] xl:w-[120px] 3xl:w-[125px]","w-[17%] bg-red-200 lg:w-[80px] xl:w-[85px] 3xl:w-[90px]","w-[19%] lg:w-[90px] xl:w-[80px] ","lg:w-[140px] xl:w-[150px]" , "w-[100px]","w-[115px]","w-[100px] 3xl:w-[175px]"]);
+    const [width, setWidth] = useState(["w-[10%] lg:w-[70px] " , "w-[18%] lg:w-[110px] xl:w-[120px] 3xl:w-[125px]","w-[17%]  lg:w-[80px] xl:w-[85px] 3xl:w-[90px]","w-[19%] lg:w-[90px] xl:w-[80px] ","lg:w-[140px] xl:w-[150px]" , "w-[100px]","w-[115px]","w-[100px] 3xl:w-[175px]"]);
     const [contWidth, setContWidth] = useState(["w-[500px]" , "w-[90px]","w-[100px]","w-[90px]","w-[200px]" , "w-[120px]","w-[110px]","w-[90px]"]);
     useEffect(() => {
         const handleResize = () => {

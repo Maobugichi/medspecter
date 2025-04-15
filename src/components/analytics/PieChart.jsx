@@ -15,7 +15,7 @@ const PieChart =  ({ theme }) => {
 
   const drawLines = {
     initial:{ pathLength: 0, strokeDasharray: 1000, strokeDashoffset: 1000, },
-    animate:{ pathLength: 1, strokeDashoffset: 0, transition: {default: {duration:0.5 , delay:5}} }
+    animate:{ pathLength: 1, strokeDashoffset: 0, transition: {default: {duration:0.5 , delay:.5}} }
 
  }
 
