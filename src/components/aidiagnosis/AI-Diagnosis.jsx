@@ -102,9 +102,9 @@ const  AIdiag = () => {
 
             
     return(
-        <div className={`flex flex-col h-auto min-h-[210vh] md:h-[100vh] xl:h-[150vh]  3xl:h-[90vh] mt-5 w-full md:w-[95%]  lg:w-[85%] 3xl:w-[75%]  md:mx-auto md:flex md:flex-col  lg:grid gap-8 overflow-hidden ${!theme ? "text-white" : "text-[#060606]"}`}>
+        <div className={`flex flex-col h-auto   md:h-[100vh] xl:h-[150vh]  3xl:h-[90vh] mt-24 w-full md:w-[95%]  lg:w-[80%] 3xl:w-[75%]  md:mx-auto md:flex md:flex-col  lg:grid gap-8 overflow-hidden ${!theme ? "text-white" : "text-[#060606]"}`}>
             <DiagHead/>
-            <div className="flex gap-5 xl:flex-row flex-col w-full  h-[80vh]   md:h-[50vh] xl:h-full 3xl:min-h-[50vh]">
+            <div className="flex gap-5 xl:flex-row flex-col w-full  h-auto   md:h-[50vh] xl:h-full 3xl:min-h-[50vh]">
                 <div className=" xl:w-[85%]  w-[95%]  mx-auto flex flex-col lg:grid  gap-10">
                     <PolyCont
                      width="lg:w-full w-full mx-auto"

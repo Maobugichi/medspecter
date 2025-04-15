@@ -9,7 +9,7 @@ const PatientHeader = ({isOpen,setIsOpen,isInfo,setIsInfo,theme}) => {
        
     }
     return(
-        <div className="flex justify-between relative  w-full mx-auto ">
+        <div className="flex justify-between  relative z-10 h-15 w-full mx-auto ">
             <h2 className="text-[20px] lg:text-[29px] font-semibold">
                 Patient List
             </h2>

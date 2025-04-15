@@ -74,7 +74,7 @@ const Analytics = () => {
         )
     })
     return(
-        <div className={`w-[95%] lg:w-[85%] mx-auto 3xl:mt-5 3xl:w-[75%]  flex flex-col h-screen  xl:h-[160vh]  3xl:h-[100vh]  gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
+        <div className={`w-[95%] lg:w-[85%] mx-auto 3xl:mt-5 3xl:w-[75%]  flex flex-col h-auto  xl:h-[160vh] mt-24  3xl:h-[100vh]  gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
           <div className=" 3xl:h-[25%] grid gap-3">
             <h2 className="text-[24px] font-semibold w-[95%] ">Analytics</h2>
               <AnalyticsBlock

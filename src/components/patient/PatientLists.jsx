@@ -28,7 +28,7 @@ const PatientList = () => {
 
     return(
         
-        <div className={`${!theme ? "text-white" : "text-[#000000]" } lg:grid  limitedSize:gap-10 h-auto  flex flex-col  gap-10  overflow-hidden  lg:w-[85%] w-[97%] mx-auto  3xl:w-[80%]`}>
+        <div className={`${!theme ? "text-white bg-[#000000]" : "text-[#000000] bg-white" }  mt-24  h-auto  flex flex-col  gap-10  lg:w-[85%] w-[97%] mx-auto  3xl:w-[80%]`}>
             <PatientHeader
              isOpen={isOpen}
              setIsOpen={setIsOpen}
@@ -36,17 +36,17 @@ const PatientList = () => {
              setIsInfo={setIsInfo}
              theme={theme}
             />
-             <div className="flex flex-col gap-10  h-full">
+            
                <PageCount
                 theme={theme}
                />
-                <PatientTable
+               
+               <PatientTable
                 isInfo={isInfo}
                 setIsInfo={setIsInfo}
                 variants={variants}
                 theme={theme}
                 />
-             </div>
             
         </div>
     )
