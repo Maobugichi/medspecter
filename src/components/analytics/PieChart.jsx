@@ -9,13 +9,13 @@ const PieChart =  ({ theme }) => {
 
   const draw = {
       initial:{ pathLength: 0, strokeDasharray: 1000, strokeDashoffset: 1000, fillOpacity: 0 },
-      animate:{ pathLength: 1, strokeDashoffset: 0, fillOpacity: [0, 0.5 ,1] , transition: {default: {duration:5 , delay:0}, fillOpacity:{duration:2,delay : 5 , type: "tween"}} }
+      animate:{ pathLength: 1, strokeDashoffset: 0, fillOpacity: [0, 0.5 ,1] , transition: {default: {duration:0.5 , delay:0}, fillOpacity:{duration:.3,delay : 0.2 , type: "tween"}} }
   
   }
 
   const drawLines = {
     initial:{ pathLength: 0, strokeDasharray: 1000, strokeDashoffset: 1000, },
-    animate:{ pathLength: 1, strokeDashoffset: 0, transition: {default: {duration:2 , delay:5}} }
+    animate:{ pathLength: 1, strokeDashoffset: 0, transition: {default: {duration:0.5 , delay:5}} }
 
  }
 

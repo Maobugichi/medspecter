@@ -21,16 +21,15 @@ function App() {
   return (
     <HashRouter>
     <ContextProvider>
-    <Routes>
-  <Route path="/" element={<Root />}>
-    <Route path="overviews/:overviewId" element={<Overview />} />
-    <Route path="patientlists/:patientlistId" element={<PatientList />} />
-    <Route path="analysis/:analysisId" element={<Analysis />} />
-    <Route path="aidiagnosis/:aidiagnosisId" element={<AIdiag />} />
-    <Route path="analytics/:analyticsId" element={<Analytics />} />
-  </Route>
-</Routes>
-
+      <Routes>
+          <Route path="/" element={<Root />}>
+            <Route path="overviews/:overviewId" element={<Overview />} />
+            <Route path="patientlists/:patientlistId" element={<PatientList />} />
+            <Route path="analysis/:analysisId" element={<Analysis />} />
+            <Route path="aidiagnosis/:aidiagnosisId" element={<AIdiag />} />
+            <Route path="analytics/:analyticsId" element={<Analytics />} />
+          </Route>
+      </Routes>
     </ContextProvider>
   </HashRouter>
   )

@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-@custom-variant limitedSize ((min-width: 1440px));
 
 @theme {
     --font-family-sans: "Instrument Sans", sans-serif;
-  
+    --breakpoint-3xl:90rem
 }
+
+
 
 
 

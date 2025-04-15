@@ -31,7 +31,7 @@ const Header = () => {
                         <input className="border border-[#C4C4C4] w-full h-full rounded-lg" type="search" />
                         <SearchIcon/>
                     </form>
-                    <div className="w-[62%] lg:w-[30%]  flex justify-between">
+                    <div className="w-[62%] lg:w-[30%]  flex justify-between items-center">
                         <ThemeNoti
                          theme={theme}
                          setTheme={setTheme}

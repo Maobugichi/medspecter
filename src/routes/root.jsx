@@ -8,7 +8,7 @@ const Root = () => {
   const { theme } = useContext(ShowContext);
     return(
       
-        <div className={`${!theme ? "bg-[#060606]" : "bg-white"} w-full flex flex-col gap-10 h-auto pb-8 transition-colors duration-300  overflow-x-hidden font-sans`}>
+        <div className={`${!theme ? "bg-[#0c0c0c]" : "bg-white"} w-full flex flex-col h-auto pb-5 xl:pb-0  xl:h-[170vh]  3xl:h-[100vh]  transition-colors duration-300  overflow-hidden  font-sans`}>
           <Header/>
           <div className="flex w-full  h-auto ">
            <SideNav/>

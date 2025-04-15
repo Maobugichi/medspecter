@@ -16,9 +16,10 @@ const BarChart = ({barItem,selectedOption,setSelectedOptions,entries,width,heigh
              head={head}
             />
            
-           <div className={`${container}`}>
+           <div className={`${container} h-[270px]`}>
                 <svg  
-                style={{ transform:  'scale(0.93)'}} 
+                style={{ transform:  'scale(0.93)',overflow:"hidden"}} 
+               
                 height={svgHeight} 
                 width={svgWidth}  
                     >

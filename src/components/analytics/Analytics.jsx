@@ -74,48 +74,54 @@ const Analytics = () => {
         )
     })
     return(
-        <div className={`lg:w-[85%] mx-auto w-[95%] flex flex-col h-auto gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
-          <h2 className="text-[24px] font-semibold w-[95%] mx-auto">Analytics</h2>
-            <AnalyticsBlock
-             docinfo={docInfo}
-            />
-             <div className="flex h-auto lg:flex-row flex-col lg:justify-between gap-5">
-                <PieCont
-                 theme={theme}
-                />
-                <BarChart
-                  width="lg:w-[65%] "
-                  height="h-[340px]"
-                  barItem={barItem}
-                  head="Demographics"
-                  axis={axis}
-                  x1={windowWidth < 600 ? 30 : 50}
-                  x2={windowWidth < 600 ? 755 : 650}
-                  x={windowWidth < 600 ? 0 : 5}
-                  svgHeight={260}
-                  svgWidth={690}
-                  container="w-full lg:w-full overflow-auto lg:overflow-hidden "
-                />
-             </div>
-
-             <div className="flex flex-col h-auto lg:flex-row w-full gap-5">
-              <PolyCont
-               width="lg:w-[60%] md:w-full w-full"
-               svgAttri={svgAttri}
-               scale={scale}
-               top="lg:top-25"
-               setSvgAttri={setSvgAttri}
+        <div className={`w-[95%] lg:w-[85%] mx-auto 3xl:mt-5 3xl:w-[75%]  flex flex-col h-screen  xl:h-[160vh]  3xl:h-[100vh]  gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
+          <div className=" 3xl:h-[25%] grid gap-3">
+            <h2 className="text-[24px] font-semibold w-[95%] ">Analytics</h2>
+              <AnalyticsBlock
+              docinfo={docInfo}
               />
-                <BarChart
-                  width="lg:w-[45%] md:w-full w-full"
-                  barItem={barItem2}
-                  height="h-[303px]"
-                  head="AI Accuracy Overview"
-                  axis={accuracyAxis}
-                  svgHeight={225}
-                  svgWidth={windowWidth < 600 ? 360 : 430}
+          </div>
+         
+            <div className="xl:h-[70%]  grid gap-4">
+              <div className="flex h-auto lg:flex-row flex-col lg:justify-between gap-5">
+                  <PieCont
+                  theme={theme}
+                  />
+                  <BarChart
+                    width="lg:w-[65%] "
+                    height="h-[340px]"
+                    barItem={barItem}
+                    head="Demographics"
+                    axis={axis}
+                    x1={windowWidth < 600 ? 30 : 50}
+                    x2={windowWidth < 600 ? 755 : 650}
+                    x={windowWidth < 600 ? 0 : 5}
+                    svgHeight={260}
+                    svgWidth={690}
+                    container="w-full lg:w-full overflow-auto lg:overflow-hidden "
+                  />
+              </div>
+
+              <div className="flex flex-col h-auto lg:flex-row w-full gap-5">
+                <PolyCont
+                width="lg:w-[60%] md:w-full w-full"
+                svgAttri={svgAttri}
+                scale={scale}
+                top="lg:top-25"
+                setSvgAttri={setSvgAttri}
                 />
-             </div>
+                  <BarChart
+                    width="lg:w-[45%] md:w-full w-full"
+                    barItem={barItem2}
+                    height="h-[303px]"
+                    head="AI Accuracy Overview"
+                    axis={accuracyAxis}
+                    svgHeight={225}
+                    svgWidth={windowWidth < 600 ? 360 : 430}
+                  />
+              </div>
+            </div>
+             
         </div>
     )
 }

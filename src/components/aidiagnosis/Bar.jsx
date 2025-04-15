@@ -9,15 +9,17 @@ const Bar = ({width,height,x,y,label,labelY,fill, labelX}) => {
     return(
         <>
           <motion.rect
-          variants={draw}
-          initial="initial"
-          whileInView="animate"
-          viewport={{once: true}}
-          stroke={fill}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          width={width} height={height} x={x} y={y} fill={fill} />
+           variants={draw}
+           initial={{ height: 0, y: 500 }}
+           animate={{ height:height, y:[500 , 400 , 300 , 200 , 100 , 0] }}
+           transition={{ duration:0.5}}
+           viewport={{once: true}}
+           stroke={fill}
+
+           strokeWidth="2"
+           strokeLinecap="round"
+           strokeLinejoin="round"
+           width={width}  x={x} y={y} fill={fill} />
           <text x={x} y={labelY} font-size="9" fill="#9c9ca0">{label}</text>
           
         </>
