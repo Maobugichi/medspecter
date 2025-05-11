@@ -104,6 +104,7 @@ const SideNav = () => {
         <motion.nav
         initial={{x:isResize && isX.xAu}}
         animate={isResize && {x:showNav  ? isX.x : isX.xAu}}
+        transition={{type:"tween", duration:1}}
         className={`lg:left-0 ${!theme ? "bg-[#0c0c0c] text-white" : "bg-white"} lg:w-[18%] w-[50%] flex flex-col justify-between fixed xl:top-24 top-3 z-20 lg:relative  xl:h-[95%] h-full  transition-colors duration-300 `}>
           
             <div className=" grid gap-8">
