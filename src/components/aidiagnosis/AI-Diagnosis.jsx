@@ -102,12 +102,12 @@ const  AIdiag = () => {
 
             
     return(
-        <div className={`flex flex-col h-auto   md:h-[100vh] xl:h-[150vh]  3xl:h-[90vh] mt-24 w-full md:w-[95%]  lg:w-[80%] 3xl:w-[75%]  md:mx-auto md:flex md:flex-col  lg:grid gap-8 overflow-hidden ${!theme ? "text-white" : "text-[#060606]"}`}>
+        <div className={`flex flex-col h-auto xl:ml-62  md:h-[100vh] xl:h-fit xl:min-h-[160vh]  3xl:h-[90vh] mt-24 w-full md:w-[95%]  lg:w-[80%] 3xl:w-[75%]  md:mx-auto md:flex md:flex-col  lg:grid gap-8 overflow-hidden ${!theme ? "text-white" : "text-[#060606]"}`}>
             <DiagHead/>
             <div className="flex gap-5 xl:flex-row flex-col w-full  h-auto   md:h-[50vh] xl:h-full 3xl:min-h-[50vh]">
-                <div className=" xl:w-[85%]  w-[95%]  mx-auto flex flex-col lg:grid  gap-10">
+                <div className=" xl:w-[85%]  w-[95%]  mx-auto flex flex-col lg:grid  gap-5">
                     <PolyCont
-                     width="lg:w-full w-full mx-auto"
+                     width=" w-full "
                      scale={scale}
                      svgAttri={svgAttri}
                      top="lg:top-20 3xl:top-15"
@@ -115,13 +115,13 @@ const  AIdiag = () => {
                     />
                     <BarChart
                      barItem={barItem}
-                     width="lg:w-[97%] w-full md:w-full mx-auto"
+                     width=" w-full "
                      height="h-[383px]"
                      head="Progress Overtime"
                      axis={axis}
-                     x1={windowWidth < 600 ? 30 : 60}
-                     x2={windowWidth < 600 ? 355 : 650}
-                     x={windowWidth < 600 ? 5 : 23}
+                     x1={windowWidth < 600 ? 30 : 25}
+                     x2={windowWidth < 600 ? 355 : 680}
+                     x={windowWidth < 600 ? 5 : 0}
                      svgHeight={285}
                      svgWidth={700}
                     />

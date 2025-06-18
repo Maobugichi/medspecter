@@ -15,7 +15,7 @@ const Analytics = () => {
   height:160,
   width: 530
   });
- const [ scale , setScale ] = useState('scale(0.68)');
+ const [ scale , setScale ] = useState('scale(0.65)');
  const { theme } = useContext(ShowContext)
  useEffect(() => {
     const handleResize = () => {
@@ -74,7 +74,7 @@ const Analytics = () => {
         )
     })
     return(
-        <div className={`w-[95%] lg:w-[85%] mx-auto 3xl:mt-5 3xl:w-[75%]  flex flex-col h-auto  xl:h-[160vh] mt-24  3xl:h-[100vh]  gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
+        <div className={`w-[95%] lg:w-[85%] mx-auto 3xl:mt-5 3xl:w-[75%]  flex flex-col h-auto  xl:h-[170vh] mt-24 xl:ml-62 xl:w-[79%]  3xl:h-[100vh]  gap-5 ${!theme ? "text-[#ffffff]" : "text-[#060606]"}`}>
           <div className=" 3xl:h-[25%] grid gap-3">
             <h2 className="text-[24px] font-semibold w-[95%] ">Analytics</h2>
               <AnalyticsBlock
@@ -82,10 +82,10 @@ const Analytics = () => {
               />
           </div>
          
-            <div className="xl:h-[70%]  grid gap-4">
-              <div className="flex h-auto lg:flex-row flex-col lg:justify-between gap-5">
+            <div className="xl:h-[90%]  grid gap-4">
+              <div className="flex h-full lg:flex-row flex-col lg:justify-between gap-5 overflow-y-hidden">
                   <PieCont
-                  theme={theme}
+                   theme={theme}
                   />
                   <BarChart
                     width="lg:w-[65%] "
@@ -94,21 +94,21 @@ const Analytics = () => {
                     head="Demographics"
                     axis={axis}
                     x1={windowWidth < 600 ? 30 : 50}
-                    x2={windowWidth < 600 ? 755 : 650}
+                    x2={windowWidth < 600 ? 755 : 750}
                     x={windowWidth < 600 ? 0 : 5}
                     svgHeight={260}
                     svgWidth={690}
-                    container="w-full lg:w-full overflow-auto lg:overflow-hidden "
+                    container="w-full lg:w-full overflow-x-auto hide-scrollbar overflow-y-hidden"
                   />
               </div>
 
               <div className="flex flex-col h-auto lg:flex-row w-full gap-5">
                 <PolyCont
-                width="lg:w-[60%] md:w-full w-full"
-                svgAttri={svgAttri}
-                scale={scale}
-                top="lg:top-25"
-                setSvgAttri={setSvgAttri}
+                 width="lg:w-[60%] md:w-full w-full"
+                 svgAttri={svgAttri}
+                 scale={scale}
+                 top="lg:top-25"
+                 setSvgAttri={setSvgAttri}
                 />
                   <BarChart
                     width="lg:w-[45%] md:w-full w-full"

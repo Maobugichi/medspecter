@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
-
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+  }
+  
 @theme {
     --font-family-sans: "Instrument Sans", sans-serif;
     --breakpoint-3xl:90rem

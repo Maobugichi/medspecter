@@ -12,7 +12,7 @@ const AnomalyFlex = () => {
         />
     ))
     return(
-        <div className="flex text-[12px] w-[65%] justify-between items-center">
+        <div className="flex text-[12px] w-[70%] justify-between  items-center">
             {anomalyItem}
         </div>
     )

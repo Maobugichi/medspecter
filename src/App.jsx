@@ -14,7 +14,7 @@ import Analytics from "./components/analytics/Analytics";
 import { ContextProvider } from "./components/ContextProvider";
 import { Navigate } from 'react-router-dom';
 import ScrollToTop from './components/scrolltotop';
-
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function App() {
   const [count, setCount] = useState(0)
