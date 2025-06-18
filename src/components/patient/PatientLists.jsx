@@ -28,7 +28,7 @@ const PatientList = () => {
 
     return(
         
-        <div className={`${!theme ? "text-white bg-[#000000]" : "text-[#000000] bg-white" }  mt-24 h-[120vh] xl:h-[175vh]  flex flex-col  gap-5  lg:w-[80%] xl:ml-62 w-[97%] mx-auto  3xl:w-[80%]`}>
+        <div className={`${!theme ? "text-white bg-[#000000]" : "text-[#000000] bg-white" }  mt-24 h-[135vh] xl:h-[175vh]  flex flex-col  gap-5  lg:w-[80%] xl:ml-62 w-[97%] mx-auto  3xl:w-[80%]`}>
             <PatientHeader
              isOpen={isOpen}
              setIsOpen={setIsOpen}
